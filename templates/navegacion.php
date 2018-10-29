@@ -45,7 +45,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i> Ver Citas</a></li>
-            <li><a href="#"><i class="fa fa-plus-circle"></i> Crear Citas</a></li>            
+            <li><a href="#"><i class="fa fa-plus-circle"></i> Agregar Citas</a></li>            
           </ul>
         </li>
         <li class="treeview">
@@ -58,7 +58,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i> Ver Ficha Clinica</a></li>
-            <li><a href="#"><i class="fa fa-plus-circle"></i> Crear Ficha Clinica</a></li>
+            <li><a href="#"><i class="fa fa-plus-circle"></i> Agregar Ficha Clinica</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -71,7 +71,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i> Ver Historia Clinica</a></li>
-            <li><a href="#"><i class="fa fa-plus-circle"></i> Crear Historia Clinica</a></li>
+            <li><a href="#"><i class="fa fa-plus-circle"></i> Agregar Historia Clinica</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -84,7 +84,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i> Ver Usuarios</a></li>
-            <li><a href="#"><i class="fa fa-plus-circle"></i> Crear Usuarios</a></li>
+            <li><a href="crear_usuario.php"><i class="fa fa-plus-circle"></i> Agregar Usuarios</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -97,7 +97,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i> Ver Categorias</a></li>
-            <li><a href="#"><i class="fa fa-plus-circle"></i> Crear Categoria</a></li>
+            <li><a href="#"><i class="fa fa-plus-circle"></i> Agregar Categoria</a></li>
           </ul>
         </li>
         <!-- Estructura de Correos
