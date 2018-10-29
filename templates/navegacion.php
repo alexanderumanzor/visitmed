@@ -76,6 +76,32 @@
         </li>
         <li class="treeview">
           <a href="#">
+            <i class="fas fa-user-circle"></i>&nbsp;&nbsp;
+            <span>Personal Médico</span>
+            <span class="pull-right-container">
+              <span class="label label-primary pull-right"></span>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i> Ver Personal Médico</a></li>
+            <li><a href="crear_usuario.php"><i class="fa fa-plus-circle"></i> Agregar Personal Médico</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-book"></i>
+            <span>Categoria Personal Médico</span>
+            <span class="pull-right-container">
+              <span class="label label-primary pull-right"></span>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i> Ver Categorias </a></li>
+            <li><a href="#"><i class="fa fa-plus-circle"></i> Agregar Categoria </a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
             <i class="far fa-user-circle"></i>&nbsp;&nbsp;
             <span>Usuarios</span>
             <span class="pull-right-container">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3307
--- Tiempo de generación: 24-10-2018 a las 22:54:58
+-- Tiempo de generación: 29-10-2018 a las 22:38:14
 -- Versión del servidor: 5.6.34-log
 -- Versión de PHP: 7.2.1
 
@@ -32,6 +32,19 @@ CREATE TABLE `categoria_usuario` (
   `id_categoria_usuario` tinyint(10) NOT NULL,
   `cat_usuario` varchar(50) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `categoria_usuario`
+--
+
+INSERT INTO `categoria_usuario` (`id_categoria_usuario`, `cat_usuario`) VALUES
+(1, 'Administrador VisitMed'),
+(2, 'Administrador General'),
+(3, 'Médicos'),
+(4, 'Supervisor Recepción'),
+(5, 'Recepción'),
+(6, 'Supervisor Enfermería'),
+(7, 'Enfermería');
 
 -- --------------------------------------------------------
 
@@ -74,7 +87,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `categoria_usuario`
 --
 ALTER TABLE `categoria_usuario`
-  MODIFY `id_categoria_usuario` tinyint(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_categoria_usuario` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --

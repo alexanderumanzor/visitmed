@@ -12,6 +12,8 @@
 <script src="js/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="js/bootstrap.min.js"></script>
+<!-- Select2 -->
+<script src="js/select2.full.min.js"></script>
 <!-- SlimScroll -->
 <script src="js/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->

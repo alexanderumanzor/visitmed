@@ -1,7 +1,13 @@
 <?php
+      include_once 'funciones/funciones.php';
       include_once 'templates/header.php';
       include_once 'templates/barra.php';
       include_once 'templates/navegacion.php';
+      if($conn->ping() ) {
+        echo "Conectado";
+    } else {
+        echo "No !";
+    }
 ?>
 
 
@@ -42,6 +48,26 @@
                                 <label for="apellido_usuario">Apellido:</label>
                                 <input type="text" class="form-control" id="apellido_usuario" name="apellido_usuario" placeholder="Tu Apellido Completo">
                             </div>
+                            <div class="form-group">
+                                <label for="nombre">Categoria Usuario:</label>
+                                <select name="categoria_usuario" class="form-control seleccionar">
+                                  <option value="0">- Seleccione -</option>
+                                    <?php 
+                                      try{
+                                          $sql = "SELECT * FROM categoria_usuario ";
+                                          $resultado = $conn->query($sql);
+                                          while($cat_usuario = $resultado->fetch_assoc()) { ?>
+                                            <option value="<?php echo $cat_usuario['id_categoria_usuario']; ?>">
+                                                <?php echo $cat_usuario['cat_usuario']; ?>
+                                            </option>
+                                        
+                                        <?php }
+                                      } catch (Exception $e) {
+                                          echo "Error: " . $e->getMessage();
+                                      }
+                                    ?>                                    
+                                </select>
+                            </div>  
                             <div class="form-group">
                                 <label for="password">Password:</label>
                                 <input type="password" class="form-control" id="password" name="password" placeholder="Password para Iniciar Sesión">
