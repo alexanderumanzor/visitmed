@@ -19,6 +19,8 @@
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="css/skins/_all-skins.min.css">
+  <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="css/sweetalert2.all.min.css">
   <!-- Admin style -->
   <link rel="stylesheet" href="css/admin.css">
 

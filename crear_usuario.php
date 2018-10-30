@@ -3,11 +3,7 @@
       include_once 'templates/header.php';
       include_once 'templates/barra.php';
       include_once 'templates/navegacion.php';
-      if($conn->ping() ) {
-        echo "Conectado";
-    } else {
-        echo "No !";
-    }
+      
 ?>
 
 
