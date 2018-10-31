@@ -35,4 +35,43 @@ if($_POST['registro'] == 'nuevo') {
         echo "Error: " . $e->getMessage();
     }
     die(json_encode($respuesta));
-}    
+}  
+
+if(isset($_POST['login_usuario'])) {
+    $usuario = $_POST['usuario'];
+    $password = $_POST['password'];
+
+    try {
+        $stmt = $conn->prepare("SELECT * FROM usuarios WHERE usuario = ? ");
+        $stmt->bind_param("s", $usuario);
+        $stmt->execute();
+        $stmt->bind_result($id_usuario, $usuario, $nombre_usuario, $apellido_usuario, $password_usuario, $categoria_usuario);
+        if($stmt->affected_rows) {
+            $existe = $stmt->fetch();
+            if($existe) {
+                if(password_verify($password, $password_usuario)) {
+                    session_start();
+                    $_SESSION['usuario'] = $usuario;
+                    $_SESSION['nombre'] = $nombre_usuario;
+                    $respuesta = array(
+                        'respuesta' => 'exitoso',
+                        'usuario' => $nombre_usuario
+                    );
+                } else {
+                    $respuesta = array(
+                        'respuesta' => 'error'
+                    );
+                }
+            } else {
+                $respuesta = array(
+                    'respuesta' => 'error'
+                );
+            }
+        } 
+        $stmt->close();
+        $conn->close();       
+    } catch (Exception $e) {
+        echo "Error: " . $e->getMessage();
+    }
+    die(json_encode($respuesta));
+}
