@@ -1,6 +1,11 @@
 <?php
       include_once 'funciones/sesiones.php';
       include_once 'funciones/funciones.php';
+      $id = $_GET['id'];
+
+      if(!filter_var($id, FILTER_VALIDATE_INT)) {
+          die("Error!");
+      }
       include_once 'templates/header.php';
       include_once 'templates/barra.php';
       include_once 'templates/navegacion.php';
@@ -13,8 +18,8 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Crear Usuario
-        <small>llena el formulario para crear un Usuario</small>
+        Editar Usuario
+        <small>llena el formulario para editar un Usuario</small>
       </h1>
     </section>
 
@@ -27,7 +32,7 @@
           <!-- Default box -->
           <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">Crear Usuario</h3>
+              <h3 class="box-title">Editar Usuario</h3>
             </div>
             <div class="box-body">
                 <!-- form start -->

@@ -109,7 +109,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i> Ver Usuarios</a></li>
+            <li><a href="lista_usuarios.php"><i class="fa fa-list-ul" aria-hidden="true"></i> Ver Usuarios</a></li>
             <li><a href="crear_usuario.php"><i class="fa fa-plus-circle"></i> Agregar Usuarios</a></li>
           </ul>
         </li>

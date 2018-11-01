@@ -1,4 +1,9 @@
 <?php
+    session_start();
+    $cerrar_sesion = $_GET['cerrar_sesion']; 
+    if($cerrar_sesion) {
+          session_destroy();
+    } 
     include_once 'funciones/funciones.php';
     include_once 'templates/header.php';  
 
@@ -11,13 +16,7 @@
         </div>
         <!-- /.login-logo -->
         <div class="login-box-body">
-          <p class="login-box-msg">Inicia Sesión Aquí</p>
-            <?php
-              session_start();
-              echo "<pre>";
-               var_dump($_SESSION); 
-              echo "</pre>";
-            ?>
+          <p class="login-box-msg">Inicia Sesión Aquí</p>            
               <form role="form" name="login_usuario_form" id="login_usuario" method="post" action="modelo_usuario.php">
                     <div class="form-group has-feedback">
                           <input type="text" class="form-control" name="usuario" placeholder="Usuario">

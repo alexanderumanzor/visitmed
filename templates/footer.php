@@ -12,6 +12,9 @@
 <script src="js/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="js/jquery.dataTables.min.js"></script>
+<script src="js/dataTables.bootstrap.min.js"></script>
 <!-- Select2 -->
 <script src="js/select2.full.min.js"></script>
 <!-- SlimScroll -->
@@ -26,10 +29,7 @@
 <script src="js/demo.js"></script>
 <!--AdminAjax-->
 <script src="js/admin-ajax.js"></script>
-<script>
-  $(document).ready(function () {
-    $('.sidebar-menu').tree()
-  })
-</script>
+<!--Apps-->
+<script src="js/app.js"></script>
 </body>
 </html>
