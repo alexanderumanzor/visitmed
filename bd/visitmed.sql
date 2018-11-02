@@ -2,10 +2,10 @@
 -- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost:3307
--- Tiempo de generación: 29-10-2018 a las 22:38:14
--- Versión del servidor: 5.6.34-log
--- Versión de PHP: 7.2.1
+-- Host: localhost:3307
+-- Generation Time: Nov 02, 2018 at 11:13 PM
+-- Server version: 5.6.34-log
+-- PHP Version: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `visitmed`
+-- Database: `visitmed`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `categoria_usuario`
+-- Table structure for table `categoria_usuario`
 --
 
 CREATE TABLE `categoria_usuario` (
@@ -34,7 +34,7 @@ CREATE TABLE `categoria_usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `categoria_usuario`
+-- Dumping data for table `categoria_usuario`
 --
 
 INSERT INTO `categoria_usuario` (`id_categoria_usuario`, `cat_usuario`) VALUES
@@ -49,7 +49,7 @@ INSERT INTO `categoria_usuario` (`id_categoria_usuario`, `cat_usuario`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuarios`
+-- Table structure for table `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -58,21 +58,32 @@ CREATE TABLE `usuarios` (
   `nombre_usuario` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `apellido_usuario` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
-  `id_cat_usuario` tinyint(10) NOT NULL
+  `id_cat_usuario` tinyint(10) NOT NULL,
+  `editado` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Índices para tablas volcadas
+-- Dumping data for table `usuarios`
+--
+
+INSERT INTO `usuarios` (`id_usuario`, `usuario`, `nombre_usuario`, `apellido_usuario`, `password`, `id_cat_usuario`, `editado`) VALUES
+(1, 'JoseSandino', 'JosÃ© Antonio', 'Sandino Montano', '$2y$12$jMoif8v1bjsurUf7GBzcTu5BfcdsBWobh83pUCHrf86wPgxzYv.HW', 1, '2018-11-02 16:21:46'),
+(2, 'ElDoctor', 'Salomon', 'Ibarra', '$2y$12$EEZx.deS4HOy1m3hJrMf3O1X1xqV.2HPly7mgVvsty/9gyaj98yFC', 3, '2018-11-02 16:45:22'),
+(3, 'admin', 'admin', 'admin', '$2y$12$0hXDI/u7HlEJ0Y0aw/x5.eTKFkss6KkzAdTuA3m6M6Ty/dFkF/7Zq', 1, '2018-11-02 16:46:54'),
+(5, 'recepcion', 'Recepcionista', 'Medico', '$2y$12$L4KcryKxIDEws/3cbFKHUe6dtl84xEoLoBTWQEjcioJ4Hb1Uab326', 5, '0000-00-00 00:00:00');
+
+--
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `categoria_usuario`
+-- Indexes for table `categoria_usuario`
 --
 ALTER TABLE `categoria_usuario`
   ADD PRIMARY KEY (`id_categoria_usuario`);
 
 --
--- Indices de la tabla `usuarios`
+-- Indexes for table `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id_usuario`),
@@ -80,25 +91,25 @@ ALTER TABLE `usuarios`
   ADD KEY `id_cat_usuario` (`id_cat_usuario`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `categoria_usuario`
+-- AUTO_INCREMENT for table `categoria_usuario`
 --
 ALTER TABLE `categoria_usuario`
   MODIFY `id_categoria_usuario` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
--- AUTO_INCREMENT de la tabla `usuarios`
+-- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
--- Restricciones para tablas volcadas
+-- Constraints for dumped tables
 --
 
 --
--- Filtros para la tabla `usuarios`
+-- Constraints for table `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`id_cat_usuario`) REFERENCES `categoria_usuario` (`id_categoria_usuario`);

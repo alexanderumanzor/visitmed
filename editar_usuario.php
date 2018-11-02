@@ -1,11 +1,12 @@
 <?php
-      include_once 'funciones/sesiones.php';
-      include_once 'funciones/funciones.php';
+
       $id = $_GET['id'];
 
-      if(!filter_var($id, FILTER_VALIDATE_INT)) {
-          die("Error!");
-      }
+      if(!filter_var($id, FILTER_VALIDATE_INT)):
+        die("Error");
+      else:
+      include_once 'funciones/sesiones.php';
+      include_once 'funciones/funciones.php';       
       include_once 'templates/header.php';
       include_once 'templates/barra.php';
       include_once 'templates/navegacion.php';
@@ -35,20 +36,26 @@
               <h3 class="box-title">Editar Usuario</h3>
             </div>
             <div class="box-body">
+                <?php
+                    $sql = "SELECT * FROM usuarios WHERE  id_usuario = $id";
+                    $resultado = $conn->query($sql);
+                    $usuario = $resultado->fetch_assoc();
+                ?>
+
                 <!-- form start -->
                 <form role="form" name="guardar-registro" id="guardar-registro" method="post" action="modelo_usuario.php">
                       <div class="box-body">
                             <div class="form-group">
                                 <label for="usuario">Usuario:</label>
-                                <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario">
+                                <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario" value="<?php echo $usuario['usuario']; ?>">
                             </div>
                             <div class="form-group">
                                 <label for="nombre_usuario">Nombre:</label>
-                                <input type="text" class="form-control" id="nombre_usuario" name="nombre_usuario" placeholder="Tu Nombre Completo">
+                                <input type="text" class="form-control" id="nombre_usuario" name="nombre_usuario" placeholder="Tu Nombre Completo" value="<?php echo $usuario['nombre_usuario']; ?>">
                             </div>
                             <div class="form-group">
                                 <label for="apellido_usuario">Apellido:</label>
-                                <input type="text" class="form-control" id="apellido_usuario" name="apellido_usuario" placeholder="Tu Apellido Completo">
+                                <input type="text" class="form-control" id="apellido_usuario" name="apellido_usuario" placeholder="Tu Apellido Completo" value="<?php echo $usuario['apellido_usuario']; ?>">
                             </div>
                             <div class="form-group">
                                 <label for="nombre">Categoria Usuario:</label>
@@ -56,14 +63,20 @@
                                   <option value="0">- Seleccione -</option>
                                     <?php 
                                       try{
+                                          $categoria_actual = $usuario['id_cat_usuario'];
                                           $sql = "SELECT * FROM categoria_usuario ";
                                           $resultado = $conn->query($sql);
-                                          while($cat_usuario = $resultado->fetch_assoc()) { ?>
-                                            <option value="<?php echo $cat_usuario['id_categoria_usuario']; ?>">
+                                          while($cat_usuario = $resultado->fetch_assoc()) { 
+                                            if($cat_usuario['id_categoria_usuario'] == $categoria_actual) { ?>
+                                            <option value="<?php echo $cat_usuario['id_categoria_usuario']; ?>" selected>
+                                                <?php echo $cat_usuario['cat_usuario']; ?>
+                                            </option>                                        
+                                        <?php } else { ?>
+                                          <option value="<?php echo $cat_usuario['id_categoria_usuario']; ?>">
                                                 <?php echo $cat_usuario['cat_usuario']; ?>
                                             </option>
-                                        
                                         <?php }
+                                          }      
                                       } catch (Exception $e) {
                                           echo "Error: " . $e->getMessage();
                                       }
@@ -83,8 +96,9 @@
                       <!-- /.box-body -->
 
                       <div class="box-footer">
-                          <input type="hidden" name="registro" value="nuevo">
-                          <button type="submit" class="btn btn-primary" id="crear_registro">Agregar</button>
+                          <input type="hidden" name="registro" value="actualizar">
+                          <input type="hidden" name="id_registro" value="<?php echo $id; ?>">
+                          <button type="submit" class="btn btn-primary" id="crear_registro">Guardar</button>
                       </div>
                 </form>
             </div>
@@ -101,5 +115,6 @@
 
   <?php
         include_once 'templates/footer.php';
+        endif;
   ?>
 
