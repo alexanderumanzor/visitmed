@@ -122,8 +122,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i> Ver Categorias</a></li>
-            <li><a href="#"><i class="fa fa-plus-circle"></i> Agregar Categoria</a></li>
+            <li><a href="lista_categoria_usuario.php"><i class="fa fa-list-ul" aria-hidden="true"></i> Ver Categorias</a></li>
+            <li><a href="crear_categoria_usuario.php"><i class="fa fa-plus-circle"></i> Agregar Categoria</a></li>
           </ul>
         </li>
         <!-- Estructura de Correos

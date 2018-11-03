@@ -79,7 +79,7 @@
 
                       <div class="box-footer">
                           <input type="hidden" name="registro" value="nuevo">
-                          <button type="submit" class="btn btn-primary" id="crear_registro">Agregar</button>
+                          <button type="submit" class="btn btn-primary" id="crear_registro_usuario">Agregar</button>
                       </div>
                 </form>
             </div>

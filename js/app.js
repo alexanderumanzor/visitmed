@@ -26,7 +26,7 @@ $(document).ready(function () {
         }
         });
 
-$('#crear_registro').attr('disabled', true);        
+$('#crear_registro_usuario').attr('disabled', true);        
 
 $('#repetir_password').on('input', function() {
     var password_nuevo = $('#password').val();
@@ -35,7 +35,7 @@ $('#repetir_password').on('input', function() {
         $('#resultado_password').text('Correcto');
         $('#resultado_password').parents('.form-group').addClass('has-success').removeClass('has-error');
         $('input#password').parents('.form-group').addClass('has-success').removeClass('has-error');
-        $('#crear_registro').attr('disabled', false);    
+        $('#crear_registro_usuario').attr('disabled', false);    
     } else {
         $('#resultado_password').text('No son iguales');
         $('#resultado_password').parents('.form-group').addClass('has-error').removeClass('has-success');
@@ -47,18 +47,18 @@ $('#repetir_password').on('input', function() {
 })
 
  //Date picker
- $('#fecha').datepicker({
+ /*$('#fecha').datepicker({
     autoclose: true
-  });
+  });*/
 
    //Initialize Select2 Elements
    $('.seleccionar').select2();
 
    //Timepicker
-   $('.timepicker').timepicker({
+  /* $('.timepicker').timepicker({
     showInputs: false
-  });
+  });*/
 
-  $('#icono').iconpicker();
+ /* $('#icono').iconpicker(); */
 
 
