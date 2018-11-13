@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Nov 02, 2018 at 11:13 PM
+-- Generation Time: Nov 13, 2018 at 05:28 PM
 -- Server version: 5.6.34-log
 -- PHP Version: 7.2.1
 
@@ -30,21 +30,22 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `categoria_usuario` (
   `id_categoria_usuario` tinyint(10) NOT NULL,
-  `cat_usuario` varchar(50) COLLATE utf8_unicode_ci NOT NULL
+  `cat_usuario` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `editado` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `categoria_usuario`
 --
 
-INSERT INTO `categoria_usuario` (`id_categoria_usuario`, `cat_usuario`) VALUES
-(1, 'Administrador VisitMed'),
-(2, 'Administrador General'),
-(3, 'Médicos'),
-(4, 'Supervisor Recepción'),
-(5, 'Recepción'),
-(6, 'Supervisor Enfermería'),
-(7, 'Enfermería');
+INSERT INTO `categoria_usuario` (`id_categoria_usuario`, `cat_usuario`, `editado`) VALUES
+(1, 'Administrador VisitMed', '0000-00-00 00:00:00'),
+(2, 'Administrador General', '0000-00-00 00:00:00'),
+(3, 'MÃ©dicos', '2018-11-13 11:12:06'),
+(4, 'Supervisor RecepciÃ³n', '2018-11-13 11:13:48'),
+(5, 'RecepciÃ³n', '2018-11-13 11:12:20'),
+(6, 'Supervisor EnfermerÃ­a', '2018-11-13 11:12:37'),
+(7, 'EnfermerÃ­a', '2018-11-13 11:11:49');
 
 -- --------------------------------------------------------
 
@@ -69,8 +70,8 @@ CREATE TABLE `usuarios` (
 INSERT INTO `usuarios` (`id_usuario`, `usuario`, `nombre_usuario`, `apellido_usuario`, `password`, `id_cat_usuario`, `editado`) VALUES
 (1, 'JoseSandino', 'JosÃ© Antonio', 'Sandino Montano', '$2y$12$jMoif8v1bjsurUf7GBzcTu5BfcdsBWobh83pUCHrf86wPgxzYv.HW', 1, '2018-11-02 16:21:46'),
 (2, 'ElDoctor', 'Salomon', 'Ibarra', '$2y$12$EEZx.deS4HOy1m3hJrMf3O1X1xqV.2HPly7mgVvsty/9gyaj98yFC', 3, '2018-11-02 16:45:22'),
-(3, 'admin', 'admin', 'admin', '$2y$12$0hXDI/u7HlEJ0Y0aw/x5.eTKFkss6KkzAdTuA3m6M6Ty/dFkF/7Zq', 1, '2018-11-02 16:46:54'),
-(5, 'recepcion', 'Recepcionista', 'Medico', '$2y$12$L4KcryKxIDEws/3cbFKHUe6dtl84xEoLoBTWQEjcioJ4Hb1Uab326', 5, '0000-00-00 00:00:00');
+(5, 'Recepcion', 'Recepcionista', 'Medico', '$2y$12$L4KcryKxIDEws/3cbFKHUe6dtl84xEoLoBTWQEjcioJ4Hb1Uab326', 5, '2018-11-03 16:26:58'),
+(6, 'elnuevo', 'El Nuevo', 'Aprende Rapido', '$2y$12$BMsT5IzAY3DHWSI70BzbS.N3z9J3eHi6Qc5wqUivsWvoBB609zDiW', 5, '0000-00-00 00:00:00');
 
 --
 -- Indexes for dumped tables
@@ -98,12 +99,12 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `categoria_usuario`
 --
 ALTER TABLE `categoria_usuario`
-  MODIFY `id_categoria_usuario` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_categoria_usuario` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- Constraints for dumped tables
 --
