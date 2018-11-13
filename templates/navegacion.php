@@ -83,8 +83,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i> Ver Personal Médico</a></li>
-            <li><a href="crear_usuario.php"><i class="fa fa-plus-circle"></i> Agregar Personal Médico</a></li>
+            <li><a href="lista_personal_medico.php"><i class="fa fa-list-ul" aria-hidden="true"></i> Ver Personal Médico</a></li>
+            <li><a href="crear_personal_medico.php"><i class="fa fa-plus-circle"></i> Agregar Personal Médico</a></li>
           </ul>
         </li>
         <li class="treeview">
