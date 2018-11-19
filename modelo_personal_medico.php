@@ -12,8 +12,8 @@ $id_registro = $_POST['id_registro'];
 
 if($_POST['registro'] == 'nuevo') {
         try{    
-                $stmt = $conn->prepare("INSERT INTO categoria_personal_medico (numero_empleado, id_cat_per_medico, cargo_medico, nombre_personal_medico, apellido_personal_medico, especialidad_medica) VALUES (?,?,?,?,?,?) ");
-                $stmt->bind_param("sisssss", $numero_empleado, $categoria_medica, $cargo, $nombre, $apellido, $especialidad);
+                $stmt = $conn->prepare("INSERT INTO personal_medico (numero_empleado, id_cat_per_medico, cargo_medico, nombre_personal_medico, apellido_personal_medico, especialidad_medica) VALUES (?,?,?,?,?,?) ");
+                $stmt->bind_param("sissss", $numero_empleado, $categoria_medica, $cargo, $nombre, $apellido, $especialidad);
                 $stmt->execute();
                 $id_registro = $stmt->insert_id;
                         if($stmt->affected_rows) {
@@ -36,8 +36,8 @@ if($_POST['registro'] == 'nuevo') {
 
 if($_POST['registro'] == 'actualizar') {
         try {       
-                $stmt = $conn->prepare('UPDATE categoria_usuario SET cat_usuario = ?, editado = NOW()  WHERE id_categoria_usuario = ?');
-                $stmt->bind_param("si", $categorias_usuario, $id_registro);     
+                $stmt = $conn->prepare('UPDATE personal_medico SET numero_empleado = ?, id_cat_per_medico = ?, cargo_medico = ?, nombre_personal_medico = ?, apellido_personal_medico = ?, especialidad_medica = ?, editado = NOW()  WHERE id_personal_medico = ?');
+                $stmt->bind_param("sissssi", $numero_empleado, $categoria_medica, $cargo, $nombre, $apellido, $especialidad, $id_registro);     
                 $stmt->execute();
                         if($stmt->affected_rows) {
                             $respuesta = array(
@@ -62,7 +62,7 @@ if($_POST['registro'] == 'actualizar') {
 if($_POST['registro'] == 'eliminar') {
     $id_borrar = $_POST['id'];
         try {
-                $stmt = $conn->prepare('DELETE FROM categoria_usuario WHERE id_categoria_usuario = ? ');
+                $stmt = $conn->prepare('DELETE FROM personal_medico WHERE id_personal_medico = ? ');
                 $stmt->bind_param('i', $id_borrar);
                 $stmt->execute();
                         if($stmt->affected_rows) {

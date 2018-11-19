@@ -18,8 +18,8 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Crear Usuario para Personal Médico <br>
-        <small>llena el formulario para crear un Usuario para Personal Médico</small>
+        Editar Usuario Personal Médico <br>
+        <small>llena el formulario para crear un Usuario Personal Médico</small>
       </h1>
     </section>
 
@@ -32,7 +32,7 @@
           <!-- Default box -->
           <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">Crear Usuario para Personal Médico</h3>
+              <h3 class="box-title">Editar Usuario Personal Médico</h3>
             </div>
             <div class="box-body">
                 <?php
@@ -53,14 +53,20 @@
                                   <option value="0">- Seleccione -</option>
                                     <?php 
                                       try{
+                                          $categoria_actual = $usuario['id_cat_per_medico'];
                                           $sql = "SELECT * FROM categoria_personal_medico ";
                                           $resultado = $conn->query($sql);
-                                          while($cat_personal_medico = $resultado->fetch_assoc()) { ?>
+                                          while($cat_personal_medico = $resultado->fetch_assoc()) {
+                                              if($cat_personal_medico['id_cat_per_medico'] == $categoria_actual) { ?>
+                                            <option value="<?php echo $cat_personal_medico['id_categoria_personal_medico']; ?>" selected>
+                                                <?php echo $cat_personal_medico['cat_personal_medico']; ?>
+                                            </option>                                        
+                                        <?php } else { ?>
                                             <option value="<?php echo $cat_personal_medico['id_categoria_personal_medico']; ?>">
                                                 <?php echo $cat_personal_medico['cat_personal_medico']; ?>
-                                            </option>
-                                        
+                                            </option>                                        
                                         <?php }
+                                          }
                                       } catch (Exception $e) {
                                           echo "Error: " . $e->getMessage();
                                       }
@@ -89,7 +95,7 @@
                       <div class="box-footer">
                           <input type="hidden" name="registro" value="actualizar">
                           <input type="hidden" name="id_registro" value="<?php echo $id; ?>">
-                          <button type="submit" class="btn btn-primary" id="crear_registro_personal_medico">Agregar</button>
+                          <button type="submit" class="btn btn-primary" id="crear_registro_personal_medico">Guardar</button>
                       </div>
                 </form>
             </div>
