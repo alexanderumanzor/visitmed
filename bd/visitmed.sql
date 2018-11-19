@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Nov 19, 2018 at 05:23 PM
+-- Generation Time: Nov 19, 2018 at 08:23 PM
 -- Server version: 5.6.34-log
 -- PHP Version: 7.2.1
 
@@ -30,17 +30,18 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `categoria_personal_medico` (
   `id_categoria_personal_medico` tinyint(10) NOT NULL,
-  `cat_personal_medico` varchar(50) COLLATE utf8_unicode_ci NOT NULL
+  `cat_personal_medico` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `editado` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `categoria_personal_medico`
 --
 
-INSERT INTO `categoria_personal_medico` (`id_categoria_personal_medico`, `cat_personal_medico`) VALUES
-(1, 'Enfermeria'),
-(2, 'Medicina General'),
-(3, 'Especialidades');
+INSERT INTO `categoria_personal_medico` (`id_categoria_personal_medico`, `cat_personal_medico`, `editado`) VALUES
+(1, 'EnfermerÃ­a', '2018-11-19 14:17:07'),
+(2, 'Medicina General', '0000-00-00 00:00:00'),
+(3, 'Especialidades', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -62,7 +63,7 @@ INSERT INTO `categoria_usuario` (`id_categoria_usuario`, `cat_usuario`, `editado
 (1, '', '2018-11-13 16:31:05'),
 (2, 'Administrador General', '0000-00-00 00:00:00'),
 (3, 'MÃ©dicos', '2018-11-13 11:12:06'),
-(4, 'Supervisor RecepciÃ³n', '2018-11-13 11:13:48'),
+(4, '', '2018-11-19 13:20:19'),
 (5, 'RecepciÃ³n', '2018-11-13 11:12:20'),
 (6, 'Supervisor EnfermerÃ­a', '2018-11-13 11:12:37'),
 (7, 'EnfermerÃ­a', '2018-11-13 11:11:49');
@@ -162,7 +163,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `categoria_personal_medico`
 --
 ALTER TABLE `categoria_personal_medico`
-  MODIFY `id_categoria_personal_medico` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_categoria_personal_medico` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `categoria_usuario`
 --
