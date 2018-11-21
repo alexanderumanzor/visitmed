@@ -2,10 +2,10 @@
 -- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3307
--- Generation Time: Nov 19, 2018 at 08:23 PM
--- Server version: 5.6.34-log
--- PHP Version: 7.2.1
+-- Servidor: localhost:3307
+-- Tiempo de generación: 21-11-2018 a las 22:42:21
+-- Versión del servidor: 5.6.34-log
+-- Versión de PHP: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `visitmed`
+-- Base de datos: `visitmed`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categoria_personal_medico`
+-- Estructura de tabla para la tabla `categoria_personal_medico`
 --
 
 CREATE TABLE `categoria_personal_medico` (
@@ -35,7 +35,7 @@ CREATE TABLE `categoria_personal_medico` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `categoria_personal_medico`
+-- Volcado de datos para la tabla `categoria_personal_medico`
 --
 
 INSERT INTO `categoria_personal_medico` (`id_categoria_personal_medico`, `cat_personal_medico`, `editado`) VALUES
@@ -46,7 +46,7 @@ INSERT INTO `categoria_personal_medico` (`id_categoria_personal_medico`, `cat_pe
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categoria_usuario`
+-- Estructura de tabla para la tabla `categoria_usuario`
 --
 
 CREATE TABLE `categoria_usuario` (
@@ -56,7 +56,7 @@ CREATE TABLE `categoria_usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `categoria_usuario`
+-- Volcado de datos para la tabla `categoria_usuario`
 --
 
 INSERT INTO `categoria_usuario` (`id_categoria_usuario`, `cat_usuario`, `editado`) VALUES
@@ -71,7 +71,98 @@ INSERT INTO `categoria_usuario` (`id_categoria_usuario`, `cat_usuario`, `editado
 -- --------------------------------------------------------
 
 --
--- Table structure for table `personal_medico`
+-- Estructura de tabla para la tabla `datos_familia_paciente`
+--
+
+CREATE TABLE `datos_familia_paciente` (
+  `id_familia_paciente` int(10) NOT NULL,
+  `numero_paciente_fam` int(10) NOT NULL,
+  `nombre_padre` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
+  `nombre_madre` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
+  `nombre_conyugue` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
+  `responsable_paciente` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
+  `direccion_responsable` text COLLATE utf8_unicode_ci NOT NULL,
+  `telefono_responsable` int(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `datos_generales_paciente`
+--
+
+CREATE TABLE `datos_generales_paciente` (
+  `id_paciente` int(10) NOT NULL,
+  `numero_expediente` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `primer_apellido_paciente` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `segundo_apellido_paciente` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `nombres_paciente` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `sexo_paciente` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `fecha_nacimiento_paciente` date NOT NULL,
+  `unidad_tiempo` tinyint(10) NOT NULL,
+  `edad_paciente` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `datos_informante`
+--
+
+CREATE TABLE `datos_informante` (
+  `id_informante_paciente` int(10) NOT NULL,
+  `numero_paciente_informante` int(10) NOT NULL,
+  `nombre_informante` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
+  `parentesco_informante` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
+  `documento_identidad_informante` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
+  `numero_documento` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
+  `usuario_recepcion` int(11) NOT NULL,
+  `observaciones_inscripcion` text COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `estado_civil_paciente`
+--
+
+CREATE TABLE `estado_civil_paciente` (
+  `id_estado_civil` tinyint(10) NOT NULL,
+  `descripcion_estado` varchar(60) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `estado_civil_paciente`
+--
+
+INSERT INTO `estado_civil_paciente` (`id_estado_civil`, `descripcion_estado`) VALUES
+(1, 'Soltero(a)'),
+(2, 'Casado(a)'),
+(3, 'Divorciado(a)'),
+(4, 'Viudo(a)'),
+(5, 'Acompañado(a)');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `identificacion_paciente`
+--
+
+CREATE TABLE `identificacion_paciente` (
+  `id_identificacion_paciente` int(10) NOT NULL,
+  `numero_paciente_ident` int(10) NOT NULL,
+  `estado_civil` tinyint(10) NOT NULL,
+  `documento_identidad` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `numero_documento` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `ocupacion_paciente` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
+  `direccion_paciente` text COLLATE utf8_unicode_ci NOT NULL,
+  `telefono_paciente` int(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `personal_medico`
 --
 
 CREATE TABLE `personal_medico` (
@@ -86,7 +177,7 @@ CREATE TABLE `personal_medico` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `personal_medico`
+-- Volcado de datos para la tabla `personal_medico`
 --
 
 INSERT INTO `personal_medico` (`id_personal_medico`, `id_cat_per_medico`, `cargo_medico`, `especialidad_medica`, `nombre_personal_medico`, `apellido_personal_medico`, `numero_empleado`, `editado`) VALUES
@@ -100,7 +191,28 @@ INSERT INTO `personal_medico` (`id_personal_medico`, `id_cat_per_medico`, `cargo
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usuarios`
+-- Estructura de tabla para la tabla `unidad_tiempo`
+--
+
+CREATE TABLE `unidad_tiempo` (
+  `id_unidad_tiempo` tinyint(10) NOT NULL,
+  `descripcion_tiempo` varchar(60) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `unidad_tiempo`
+--
+
+INSERT INTO `unidad_tiempo` (`id_unidad_tiempo`, `descripcion_tiempo`) VALUES
+(1, 'Años'),
+(2, 'Meses'),
+(3, 'Días'),
+(4, 'Horas');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -114,7 +226,7 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `usuarios`
+-- Volcado de datos para la tabla `usuarios`
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `usuario`, `nombre_usuario`, `apellido_usuario`, `password`, `id_cat_usuario`, `editado`) VALUES
@@ -124,23 +236,57 @@ INSERT INTO `usuarios` (`id_usuario`, `usuario`, `nombre_usuario`, `apellido_usu
 (6, 'elnuevo', 'El Nuevo', 'Aprende Rapido', '$2y$12$BMsT5IzAY3DHWSI70BzbS.N3z9J3eHi6Qc5wqUivsWvoBB609zDiW', 5, '0000-00-00 00:00:00');
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `categoria_personal_medico`
+-- Indices de la tabla `categoria_personal_medico`
 --
 ALTER TABLE `categoria_personal_medico`
   ADD PRIMARY KEY (`id_categoria_personal_medico`);
 
 --
--- Indexes for table `categoria_usuario`
+-- Indices de la tabla `categoria_usuario`
 --
 ALTER TABLE `categoria_usuario`
   ADD PRIMARY KEY (`id_categoria_usuario`);
 
 --
--- Indexes for table `personal_medico`
+-- Indices de la tabla `datos_familia_paciente`
+--
+ALTER TABLE `datos_familia_paciente`
+  ADD PRIMARY KEY (`id_familia_paciente`),
+  ADD KEY `numero_paciente_fam` (`numero_paciente_fam`);
+
+--
+-- Indices de la tabla `datos_generales_paciente`
+--
+ALTER TABLE `datos_generales_paciente`
+  ADD PRIMARY KEY (`id_paciente`),
+  ADD KEY `unidad_tiempo` (`unidad_tiempo`);
+
+--
+-- Indices de la tabla `datos_informante`
+--
+ALTER TABLE `datos_informante`
+  ADD PRIMARY KEY (`id_informante_paciente`);
+
+--
+-- Indices de la tabla `estado_civil_paciente`
+--
+ALTER TABLE `estado_civil_paciente`
+  ADD PRIMARY KEY (`id_estado_civil`);
+
+--
+-- Indices de la tabla `identificacion_paciente`
+--
+ALTER TABLE `identificacion_paciente`
+  ADD PRIMARY KEY (`id_identificacion_paciente`),
+  ADD KEY `numero_paciente_ident` (`numero_paciente_ident`),
+  ADD KEY `estado_civil` (`estado_civil`);
+
+--
+-- Indices de la tabla `personal_medico`
 --
 ALTER TABLE `personal_medico`
   ADD PRIMARY KEY (`id_personal_medico`),
@@ -148,7 +294,13 @@ ALTER TABLE `personal_medico`
   ADD KEY `id_cat_per_medico` (`id_cat_per_medico`);
 
 --
--- Indexes for table `usuarios`
+-- Indices de la tabla `unidad_tiempo`
+--
+ALTER TABLE `unidad_tiempo`
+  ADD PRIMARY KEY (`id_unidad_tiempo`);
+
+--
+-- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id_usuario`),
@@ -156,41 +308,85 @@ ALTER TABLE `usuarios`
   ADD KEY `id_cat_usuario` (`id_cat_usuario`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `categoria_personal_medico`
+-- AUTO_INCREMENT de la tabla `categoria_personal_medico`
 --
 ALTER TABLE `categoria_personal_medico`
-  MODIFY `id_categoria_personal_medico` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_categoria_personal_medico` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT for table `categoria_usuario`
+-- AUTO_INCREMENT de la tabla `categoria_usuario`
 --
 ALTER TABLE `categoria_usuario`
   MODIFY `id_categoria_usuario` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
--- AUTO_INCREMENT for table `personal_medico`
+-- AUTO_INCREMENT de la tabla `datos_familia_paciente`
+--
+ALTER TABLE `datos_familia_paciente`
+  MODIFY `id_familia_paciente` int(10) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT de la tabla `datos_informante`
+--
+ALTER TABLE `datos_informante`
+  MODIFY `id_informante_paciente` int(10) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT de la tabla `estado_civil_paciente`
+--
+ALTER TABLE `estado_civil_paciente`
+  MODIFY `id_estado_civil` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT de la tabla `identificacion_paciente`
+--
+ALTER TABLE `identificacion_paciente`
+  MODIFY `id_identificacion_paciente` int(10) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT de la tabla `personal_medico`
 --
 ALTER TABLE `personal_medico`
-  MODIFY `id_personal_medico` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_personal_medico` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
--- AUTO_INCREMENT for table `usuarios`
+-- AUTO_INCREMENT de la tabla `unidad_tiempo`
+--
+ALTER TABLE `unidad_tiempo`
+  MODIFY `id_unidad_tiempo` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
--- Constraints for dumped tables
+-- Restricciones para tablas volcadas
 --
 
 --
--- Constraints for table `personal_medico`
+-- Filtros para la tabla `datos_familia_paciente`
+--
+ALTER TABLE `datos_familia_paciente`
+  ADD CONSTRAINT `datos_familia_paciente_ibfk_1` FOREIGN KEY (`numero_paciente_fam`) REFERENCES `datos_generales_paciente` (`id_paciente`);
+
+--
+-- Filtros para la tabla `datos_generales_paciente`
+--
+ALTER TABLE `datos_generales_paciente`
+  ADD CONSTRAINT `datos_generales_paciente_ibfk_1` FOREIGN KEY (`unidad_tiempo`) REFERENCES `unidad_tiempo` (`id_unidad_tiempo`);
+
+--
+-- Filtros para la tabla `identificacion_paciente`
+--
+ALTER TABLE `identificacion_paciente`
+  ADD CONSTRAINT `identificacion_paciente_ibfk_1` FOREIGN KEY (`numero_paciente_ident`) REFERENCES `datos_generales_paciente` (`id_paciente`),
+  ADD CONSTRAINT `identificacion_paciente_ibfk_2` FOREIGN KEY (`estado_civil`) REFERENCES `estado_civil_paciente` (`id_estado_civil`);
+
+--
+-- Filtros para la tabla `personal_medico`
 --
 ALTER TABLE `personal_medico`
   ADD CONSTRAINT `personal_medico_ibfk_1` FOREIGN KEY (`id_cat_per_medico`) REFERENCES `categoria_personal_medico` (`id_categoria_personal_medico`);
 
 --
--- Constraints for table `usuarios`
+-- Filtros para la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`id_cat_usuario`) REFERENCES `categoria_usuario` (`id_categoria_usuario`);
