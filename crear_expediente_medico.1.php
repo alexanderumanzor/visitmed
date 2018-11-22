@@ -130,7 +130,6 @@
                                                 <div class="form-group col-md-12"></div>
                                                 <div class="form-group col-md-12"></div>
                                                 <h3 class="box-title">B) DE LA FAMILIA</h3>
-                                                </div>
                                                 <div class="form-group col-md-12"></div>
                                                                 <div class="form-row">
                                                                                 <div class="form-group col-md-6">
@@ -160,8 +159,7 @@
                                                                 </div>
                                                 <div class="form-group col-md-12"></div>
                                                 <div class="form-group col-md-12"></div>
-                                                <h3 class="box-title">B) DE LA INFORMACION</h3>
-                                                </div>
+                                                <h3 class="box-title">C) DE LA INFORMACION</h3>
                                                 <div class="form-group col-md-12"></div>
                                                                 <div class="form-row">
                                                                                 <div class="form-group col-md-8">
@@ -203,7 +201,6 @@
                                                 <input type="hidden" name="registro" value="nuevo">
                                                 <button type="submit" class="btn btn-primary" id="crear_registro_expediente_medico">Agregar</button>
                                 </div>
-                                <div class="form-group col-md-12"></div>
                                 <!-- /.box-footer-->
                             </div>
                             <!-- /.box-body -->
