@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="css/ionicons.min.css">
   <!-- DataTables -->
   <link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
+  <!-- Bootstrap datepicker -->
+  <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins

@@ -23,6 +23,8 @@
 <script src="js/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="js/adminlte.min.js"></script>
+<!-- Bootstrap Datepicker -->
+<script src="js/bootstrap-datepicker.min.js"></script>
 <!-- SweetAlert2 -->
 <script src="js/sweetalert2.all.min.js"></script>
 <!-- AdminLTE for demo purposes -->

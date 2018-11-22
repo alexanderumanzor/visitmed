@@ -47,9 +47,9 @@ $('#repetir_password').on('input', function() {
 })
 
  //Date picker
- /*$('#fecha').datepicker({
+ $('.fecha').datepicker({
     autoclose: true
-  });*/
+  });
 
    //Initialize Select2 Elements
    $('.seleccionar').select2();
