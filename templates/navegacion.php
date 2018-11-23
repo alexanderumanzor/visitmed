@@ -44,8 +44,10 @@
             </span>
           </a>
           <ul class="treeview-menu">
+            <li><a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i> Ver Fichas Expedientes</a></li>
+            <li><a href="crear_expediente_medico.1.php"><i class="fa fa-plus-circle"></i> Agregar Ficha Expediente</a></li>   
             <li><a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i> Ver Citas</a></li>
-            <li><a href="#"><i class="fa fa-plus-circle"></i> Agregar Citas</a></li>            
+            <li><a href="#"><i class="fa fa-plus-circle"></i> Agregar Citas</a></li>         
           </ul>
         </li>
         <li class="treeview">

@@ -85,11 +85,21 @@
                                                                                                                 <input type="text" class="form-control" id="edad_paciente" name="edad_paciente">
                                                                                                         </div>
                                                                                                         <div class="form-group col-md-7" >
-                                                                                                                <select class="form-control" id="unidad_tiempo" name="unidad_tiempo">
-                                                                                                                        <option selected value="años">Años</option>
-                                                                                                                        <option value="meses">Meses</option>
-                                                                                                                        <option value="dias">Días</option>
-                                                                                                                        <option value="horas">Horas</option>
+                                                                                                                <select class="form-control seleccionar" id="unidad_tiempo" name="unidad_tiempo">
+                                                                                                                        <?php 
+                                                                                                                                try{
+                                                                                                                                        $sql = "SELECT * FROM unidad_tiempo ";
+                                                                                                                                        $resultado = $conn->query($sql);
+                                                                                                                                        while($tiempo = $resultado->fetch_assoc()) { ?>
+                                                                                                                                        <option value="<?php echo $tiempo['id_unidad_tiempo']; ?>">
+                                                                                                                                                <?php echo $tiempo['descripcion_tiempo']; ?>
+                                                                                                                                        </option>
+                                                                                                                                        
+                                                                                                                                        <?php }
+                                                                                                                                } catch (Exception $e) {
+                                                                                                                                        echo "Error: " . $e->getMessage();
+                                                                                                                                }
+                                                                                                                        ?>       
                                                                                                                 </select>
                                                                                                         </div>
                                                                                                 </div>
@@ -97,12 +107,21 @@
                                                                                 <div class="form-group col-md-2">
                                                                                         <label for="estado_civil">Estado Civil: </label>
                                                                                         <div class="row">                                                                    
-                                                                                                        <select class="form-control" id="estado_civil" name="estado_civil">
-                                                                                                                <option selected value="soltero(a)">Soltero(a)</option>
-                                                                                                                <option value="casado(a)">Casado(a)</option>
-                                                                                                                <option value="divorciado(a)">Divorciado(a)</option>
-                                                                                                                <option value="viudo(a)">Viudo(a)</option>
-                                                                                                                <option value="acompañado(a)">Acompañado(a)</option>
+                                                                                                        <select class="form-control seleccionar" id="estado_civil" name="estado_civil">
+                                                                                                                <?php 
+                                                                                                                        try{
+                                                                                                                                $sql = "SELECT * FROM estado_civil_paciente ";
+                                                                                                                                $resultado = $conn->query($sql);
+                                                                                                                                while($tiempo = $resultado->fetch_assoc()) { ?>
+                                                                                                                                <option value="<?php echo $tiempo['id_estado_civil']; ?>">
+                                                                                                                                        <?php echo $tiempo['descripcion_estado']; ?>
+                                                                                                                                </option>
+                                                                                                                                
+                                                                                                                                <?php }
+                                                                                                                        } catch (Exception $e) {
+                                                                                                                                echo "Error: " . $e->getMessage();
+                                                                                                                        }
+                                                                                                                ?>       
                                                                                                         </select>
                                                                                         </div>
                                                                                 </div>
