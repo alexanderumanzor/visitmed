@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Nov 23, 2018 at 11:05 PM
+-- Generation Time: Nov 24, 2018 at 10:14 PM
 -- Server version: 5.6.34-log
 -- PHP Version: 7.2.1
 
@@ -116,7 +116,8 @@ CREATE TABLE `datos_informante` (
   `parentesco_informante` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
   `documento_identidad_informante` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
   `numero_documento_informante` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
-  `usuario_recepcion` int(11) NOT NULL,
+  `usuario_recepcion` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
+  `fecha_inscripcion` date NOT NULL,
   `observaciones_inscripcion` text COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 

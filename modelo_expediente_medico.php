@@ -10,6 +10,7 @@ $sexo = $_POST['sexo_paciente'];
 $nacimiento = $_POST['fecha_nacimiento'];
 $edad = $_POST['edad_paciente'];
 $unidad_tiempo = $_POST['unidad_tiempo'];
+
 $estado = $_POST['estado_civil'];
 $documento_identidad = $_POST['documento_identidad'];
 $numero_documento = $_POST['numero_documento'];
@@ -32,19 +33,28 @@ $usuario = $_POST['usuario_recepcion'];
 $inscripcion = $_POST['fecha_inscripcion'];
 $observaciones = $_POST['observaciones_inscripciones'];
 
+$id_registro = $_POST['id_registro'];
 
 
 if($_POST['registro'] == 'nuevo') {
         try{    
-                $sql = "INSERT INTO datos_generales_paciente LEFT JOIN identificacion_paciente ";
-                $stmt = $conn->prepare("INSERT INTO personal_medico (numero_empleado, id_cat_per_medico, cargo_medico, nombre_personal_medico, apellido_personal_medico, especialidad_medica) VALUES (?,?,?,?,?,?) ");
-                $stmt->bind_param("sissss", $numero_empleado, $categoria_medica, $cargo, $nombre, $apellido, $especialidad);
+                $stmt = $conn->prepare("INSERT INTO datos_generales_paciente (numero_expediente, primer_apellido_paciente, segundo_apellido_paciente, nombres_paciente, sexo_paciente, fecha_nacimiento_paciente, edad_paciente, unidad_tiempo ) VALUES (?,?,?,?,?,?,?,?) ");
+                $stmt->bind_param("ssssssii", $numero_expediente, $primer_apellido, $segundo_apellido, $nombre, $sexo, $nacimiento, $edad, $unidad_tiempo);
                 $stmt->execute();
                 $id_registro = $stmt->insert_id;
+                $stmt = $conn->prepare("INSERT INTO identificacion_paciente (numero_paciente_ident, estado_civil, documento_identidad, numero_documento, ocupacion_paciente, direccion_paciente, telefono_paciente) VALUES (?,?,?,?,?,?,?) ");
+                $stmt->bind_param("iissssi", $id_registro, $estado , $documento_identidad, $numero_documento, $ocupacion, $direccion, $telefono);
+                $stmt->execute();
+                $stmt = $conn->prepare("INSERT INTO datos_familia_paciente (numero_paciente_fam, id_registro, nombre_padre, nombre_madre, nombre_conyugue, responsable_paciente, direccion_responsable, telefono_responsable) VALUES (?,?,?,?,?,?,?,?,?) ");
+                $stmt->bind_param("isssssi", $id_registro, $padre, $madre, $conyugue, $responsable, $direccion_responsable, $telefono_responsable);
+                $stmt->execute();
+                $stmt = $conn->prepare("INSERT INTO datos_informante (numero_paciente_informante, nombre_informante, parentesco_informante, documento_identidad_informante, numero_documento_informante, usuario_recepcion, fecha_inscripcion, observaciones_inscripcion) VALUES (?,?,?,?,?,?,?,?) ");
+                $stmt->bind_param("isssssss", $id_registro, $informante, $parentesco, $documento_identidad_informante, $numero_documento_informante, $usuario, $inscripcion, $observaciones);
+                $stmt->execute();
                         if($stmt->affected_rows) {
                                 $respuesta = array(
                                     'respuesta' => 'exito',
-                                    'id_categoria_usuario' => $id_registro
+                                    'id_registro' => $id_registro
                                 );
                         } else {
                                 $respuesta = array(
