@@ -26,7 +26,7 @@
                     <div class="box">
                             <div class="box-body">
                                 <!-- Form start -->
-                                <form  role="form" name="guardar-registro" id="guardar-registro" method="post" action="modelo_expediente_medico.php">
+                                <form  role="form" name="guardar-registro" id="guardar-registro" method="POST" action="modelo_expediente_medico.php">
                                                                 <div class="form-group col-md-12"></div>
                                                                 <div class="form-group col-md-12"></div>
                                                                 <div class="form-row">
