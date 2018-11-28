@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3307
--- Tiempo de generación: 26-11-2018 a las 22:46:27
+-- Tiempo de generación: 28-11-2018 a las 22:26:03
 -- Versión del servidor: 5.6.34-log
 -- Versión de PHP: 7.2.1
 
@@ -129,34 +129,30 @@ CREATE TABLE `datos_informante` (
 
 CREATE TABLE `datos_paciente` (
   `id_paciente` int(10) NOT NULL,
-  `numero_expediente` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `primer_apellido_paciente` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `segundo_apellido_paciente` varchar(50) CHARACTER SET utf32 COLLATE utf32_unicode_ci NOT NULL,
-  `nombre_paciente` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `sexo_paciente` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `nacimiento_paciente` date NOT NULL,
+  `numero_expediente` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
+  `primer_apellido_paciente` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
+  `segundo_apellido_paciente` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
+  `nombre_paciente` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
+  `sexo_paciente` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
+  `fecha_nacimiento_paciente` date NOT NULL,
   `edad_paciente` int(10) NOT NULL,
   `unidad_tiempo` tinyint(10) NOT NULL,
   `estado_civil` tinyint(10) NOT NULL,
-  `documento_legal_identidad` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `numero_documento` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `documento_legal_identidad` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
+  `numero_documento` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
   `ocupacion_paciente` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
   `direccion_paciente` text COLLATE utf8_unicode_ci NOT NULL,
-  `telefono_paciente` int(20) NOT NULL,
-  `nombre_padre` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
-  `nombre_madre` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
-  `nombre_conyugue` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
-  `responsable_paciente` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
-  `direccion_responsable` text COLLATE utf8_unicode_ci NOT NULL,
-  `telefono_responsable` int(20) NOT NULL,
-  `nombre_informante` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
-  `parentesco_informante` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
-  `documento_identidad_informante` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
-  `numero_documento_informante` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
-  `usuario_recepcion` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
-  `fecha_recepcion` date NOT NULL,
-  `observaciones_inscripcion` text COLLATE utf8_unicode_ci NOT NULL
+  `telefono_paciente` int(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `datos_paciente`
+--
+
+INSERT INTO `datos_paciente` (`id_paciente`, `numero_expediente`, `primer_apellido_paciente`, `segundo_apellido_paciente`, `nombre_paciente`, `sexo_paciente`, `fecha_nacimiento_paciente`, `edad_paciente`, `unidad_tiempo`, `estado_civil`, `documento_legal_identidad`, `numero_documento`, `ocupacion_paciente`, `direccion_paciente`, `telefono_paciente`) VALUES
+(1, 'E00001', 'Morales', 'Montalvan', 'Maria Venancia', 'Femenino', '1988-10-30', 30, 1, 1, 'Cedula de Identidad', 'Reg267878547164', 'Ama de Casa', 'Villa El Carmen Casa 89', 123456789),
+(2, 'a', 'a', 'a', 'a', 'a', '2018-11-13', 1, 3, 1, 'a', 'a', 'a', 'a', 1),
+(3, 'a', 'a', 'a', 'a', 'Masculino', '2018-11-27', 1, 1, 1, 'a', 'a', 'a', 'a', 1);
 
 -- --------------------------------------------------------
 
@@ -381,7 +377,7 @@ ALTER TABLE `datos_informante`
 -- AUTO_INCREMENT de la tabla `datos_paciente`
 --
 ALTER TABLE `datos_paciente`
-  MODIFY `id_paciente` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_paciente` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `estado_civil_paciente`
 --
