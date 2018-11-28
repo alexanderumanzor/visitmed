@@ -45,7 +45,48 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i> Ver Fichas Expedientes</a></li>
-            <li><a href="crear_expediente_medico1.php"><i class="fa fa-plus-circle"></i> Agregar Ficha Expediente</a></li>   
+            <li class="treeview">
+                    <a href="#"><i class="fa fa-plus-circle"></i> Agregar Ficha Expediente
+                          <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                          </span>
+                    </a>
+                          <ul class="treeview-menu">
+                                      <li class="treeview">
+                                              <a href="#"><i class="far fa-circle"></i> Del Paciente
+                                                      <span class="pull-right-container">
+                                                            <i class="fa fa-angle-left pull-right"></i>
+                                                      </span>
+                                              </a>
+                                              <ul class="treeview-menu">
+                                                      <li><a href="#"><i class="fa fa-list-ul"></i> Ver Ficha</a></li>
+                                                      <li><a href="crear_ficha_paciente.php"><i class="fa fa-plus-circle"></i> Agregar Ficha</a></li>
+                                              </ul>
+                                      </li>
+                                      <li class="treeview">
+                                              <a href="#"><i class="far fa-circle"></i> De la Familia
+                                                      <span class="pull-right-container">
+                                                            <i class="fa fa-angle-left pull-right"></i>
+                                                      </span>
+                                              </a>
+                                              <ul class="treeview-menu">
+                                                      <li><a href="#"><i class="fa fa-list-ul"></i> Ver Ficha</a></li>
+                                                      <li><a href="#"><i class="fa fa-plus-circle"></i> Agregar Ficha</a></li>
+                                              </ul>
+                                      </li>
+                                      <li class="treeview">
+                                              <a href="#"><i class="far fa-circle"></i> De la Información
+                                                      <span class="pull-right-container">
+                                                            <i class="fa fa-angle-left pull-right"></i>
+                                                      </span>
+                                              </a>
+                                              <ul class="treeview-menu">
+                                                      <li><a href="#"><i class="fa fa-list-ul"></i> Ver Ficha</a></li>
+                                                      <li><a href="#"><i class="fa fa-plus-circle"></i> Agregar Ficha</a></li>
+                                              </ul>
+                                      </li>
+                          </ul>
+            </li> 
             <li><a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i> Ver Citas</a></li>
             <li><a href="#"><i class="fa fa-plus-circle"></i> Agregar Citas</a></li>         
           </ul>
