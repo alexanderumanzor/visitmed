@@ -2,10 +2,10 @@
 -- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost:3307
--- Tiempo de generación: 28-11-2018 a las 22:26:03
--- Versión del servidor: 5.6.34-log
--- Versión de PHP: 7.2.1
+-- Host: localhost:8889
+-- Generation Time: Nov 29, 2018 at 03:19 AM
+-- Server version: 5.6.34-log
+-- PHP Version: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `visitmed`
+-- Database: `visitmed`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `categoria_personal_medico`
+-- Table structure for table `categoria_personal_medico`
 --
 
 CREATE TABLE `categoria_personal_medico` (
@@ -35,7 +35,7 @@ CREATE TABLE `categoria_personal_medico` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `categoria_personal_medico`
+-- Dumping data for table `categoria_personal_medico`
 --
 
 INSERT INTO `categoria_personal_medico` (`id_categoria_personal_medico`, `cat_personal_medico`, `editado`) VALUES
@@ -46,7 +46,7 @@ INSERT INTO `categoria_personal_medico` (`id_categoria_personal_medico`, `cat_pe
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `categoria_usuario`
+-- Table structure for table `categoria_usuario`
 --
 
 CREATE TABLE `categoria_usuario` (
@@ -56,7 +56,7 @@ CREATE TABLE `categoria_usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `categoria_usuario`
+-- Dumping data for table `categoria_usuario`
 --
 
 INSERT INTO `categoria_usuario` (`id_categoria_usuario`, `cat_usuario`, `editado`) VALUES
@@ -71,7 +71,7 @@ INSERT INTO `categoria_usuario` (`id_categoria_usuario`, `cat_usuario`, `editado
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `datos_familia_paciente`
+-- Table structure for table `datos_familia_paciente`
 --
 
 CREATE TABLE `datos_familia_paciente` (
@@ -88,7 +88,7 @@ CREATE TABLE `datos_familia_paciente` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `datos_generales_paciente`
+-- Table structure for table `datos_generales_paciente`
 --
 
 CREATE TABLE `datos_generales_paciente` (
@@ -106,7 +106,7 @@ CREATE TABLE `datos_generales_paciente` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `datos_informante`
+-- Table structure for table `datos_informante`
 --
 
 CREATE TABLE `datos_informante` (
@@ -124,7 +124,7 @@ CREATE TABLE `datos_informante` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `datos_paciente`
+-- Table structure for table `datos_paciente`
 --
 
 CREATE TABLE `datos_paciente` (
@@ -142,22 +142,25 @@ CREATE TABLE `datos_paciente` (
   `numero_documento` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
   `ocupacion_paciente` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
   `direccion_paciente` text COLLATE utf8_unicode_ci NOT NULL,
-  `telefono_paciente` int(20) NOT NULL
+  `telefono_paciente` int(20) NOT NULL,
+  `editado` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `datos_paciente`
+-- Dumping data for table `datos_paciente`
 --
 
-INSERT INTO `datos_paciente` (`id_paciente`, `numero_expediente`, `primer_apellido_paciente`, `segundo_apellido_paciente`, `nombre_paciente`, `sexo_paciente`, `fecha_nacimiento_paciente`, `edad_paciente`, `unidad_tiempo`, `estado_civil`, `documento_legal_identidad`, `numero_documento`, `ocupacion_paciente`, `direccion_paciente`, `telefono_paciente`) VALUES
-(1, 'E00001', 'Morales', 'Montalvan', 'Maria Venancia', 'Femenino', '1988-10-30', 30, 1, 1, 'Cedula de Identidad', 'Reg267878547164', 'Ama de Casa', 'Villa El Carmen Casa 89', 123456789),
-(2, 'a', 'a', 'a', 'a', 'a', '2018-11-13', 1, 3, 1, 'a', 'a', 'a', 'a', 1),
-(3, 'a', 'a', 'a', 'a', 'Masculino', '2018-11-27', 1, 1, 1, 'a', 'a', 'a', 'a', 1);
+INSERT INTO `datos_paciente` (`id_paciente`, `numero_expediente`, `primer_apellido_paciente`, `segundo_apellido_paciente`, `nombre_paciente`, `sexo_paciente`, `fecha_nacimiento_paciente`, `edad_paciente`, `unidad_tiempo`, `estado_civil`, `documento_legal_identidad`, `numero_documento`, `ocupacion_paciente`, `direccion_paciente`, `telefono_paciente`, `editado`) VALUES
+(1, 'E00001', 'Morales', 'Montalvan', 'Maria Venancia', 'Femenino', '1988-10-30', 30, 1, 1, 'Cedula de Identidad', 'Reg267878547164', 'Abogada', 'Villa El Carmen Casa 89', 123456789, '2018-11-28 20:13:34'),
+(2, 'E00002', 'Zuniga', 'Rayo', 'Sarai', 'Femenino', '2018-11-13', 15, 3, 1, 'no posee', 'sin nÃºmero', 'neonato', 'San Salvador', 0, '2018-11-28 21:09:44'),
+(3, 'E00003', 'Suazo', '', 'Mireya', 'Femenino', '2000-10-24', 18, 1, 1, 'Cedula de Identidad', 'REG123456789', 'Estudiante', 'La Salvadorita, 2 cuadras al este', 123456789, '2018-11-28 21:11:26'),
+(4, 'E00004', 'Mercury', 'Lopez', 'Federico', 'Masculino', '1983-04-13', 35, 1, 3, 'Cedula de Residencia', 'CR1245', 'AlbaÃ±il', 'San Pedro Sula', 1122334455, '2018-11-28 21:14:07'),
+(9, 'E00005', 'Perez', '', 'Juan', 'Masculino', '2018-02-27', 9, 2, 1, 'no posee', 'sin registro', 'neonato', 'San JosÃ©', 0, '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `estado_civil_paciente`
+-- Table structure for table `estado_civil_paciente`
 --
 
 CREATE TABLE `estado_civil_paciente` (
@@ -166,7 +169,7 @@ CREATE TABLE `estado_civil_paciente` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `estado_civil_paciente`
+-- Dumping data for table `estado_civil_paciente`
 --
 
 INSERT INTO `estado_civil_paciente` (`id_estado_civil`, `descripcion_estado`) VALUES
@@ -179,7 +182,7 @@ INSERT INTO `estado_civil_paciente` (`id_estado_civil`, `descripcion_estado`) VA
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `identificacion_paciente`
+-- Table structure for table `identificacion_paciente`
 --
 
 CREATE TABLE `identificacion_paciente` (
@@ -196,7 +199,7 @@ CREATE TABLE `identificacion_paciente` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `personal_medico`
+-- Table structure for table `personal_medico`
 --
 
 CREATE TABLE `personal_medico` (
@@ -211,7 +214,7 @@ CREATE TABLE `personal_medico` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `personal_medico`
+-- Dumping data for table `personal_medico`
 --
 
 INSERT INTO `personal_medico` (`id_personal_medico`, `id_cat_per_medico`, `cargo_medico`, `especialidad_medica`, `nombre_personal_medico`, `apellido_personal_medico`, `numero_empleado`, `editado`) VALUES
@@ -225,7 +228,7 @@ INSERT INTO `personal_medico` (`id_personal_medico`, `id_cat_per_medico`, `cargo
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `unidad_tiempo`
+-- Table structure for table `unidad_tiempo`
 --
 
 CREATE TABLE `unidad_tiempo` (
@@ -234,7 +237,7 @@ CREATE TABLE `unidad_tiempo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `unidad_tiempo`
+-- Dumping data for table `unidad_tiempo`
 --
 
 INSERT INTO `unidad_tiempo` (`id_unidad_tiempo`, `descripcion_tiempo`) VALUES
@@ -246,7 +249,7 @@ INSERT INTO `unidad_tiempo` (`id_unidad_tiempo`, `descripcion_tiempo`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuarios`
+-- Table structure for table `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -260,7 +263,7 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `usuarios`
+-- Dumping data for table `usuarios`
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `usuario`, `nombre_usuario`, `apellido_usuario`, `password`, `id_cat_usuario`, `editado`) VALUES
@@ -270,57 +273,58 @@ INSERT INTO `usuarios` (`id_usuario`, `usuario`, `nombre_usuario`, `apellido_usu
 (6, 'elnuevo', 'El Nuevo', 'Aprende Rapido', '$2y$12$BMsT5IzAY3DHWSI70BzbS.N3z9J3eHi6Qc5wqUivsWvoBB609zDiW', 5, '0000-00-00 00:00:00');
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `categoria_personal_medico`
+-- Indexes for table `categoria_personal_medico`
 --
 ALTER TABLE `categoria_personal_medico`
   ADD PRIMARY KEY (`id_categoria_personal_medico`);
 
 --
--- Indices de la tabla `categoria_usuario`
+-- Indexes for table `categoria_usuario`
 --
 ALTER TABLE `categoria_usuario`
   ADD PRIMARY KEY (`id_categoria_usuario`);
 
 --
--- Indices de la tabla `datos_familia_paciente`
+-- Indexes for table `datos_familia_paciente`
 --
 ALTER TABLE `datos_familia_paciente`
   ADD PRIMARY KEY (`id_familia_paciente`),
   ADD KEY `numero_paciente_fam` (`numero_paciente_fam`);
 
 --
--- Indices de la tabla `datos_generales_paciente`
+-- Indexes for table `datos_generales_paciente`
 --
 ALTER TABLE `datos_generales_paciente`
   ADD PRIMARY KEY (`id_paciente`),
   ADD KEY `unidad_tiempo` (`unidad_tiempo`);
 
 --
--- Indices de la tabla `datos_informante`
+-- Indexes for table `datos_informante`
 --
 ALTER TABLE `datos_informante`
   ADD PRIMARY KEY (`id_informante_paciente`);
 
 --
--- Indices de la tabla `datos_paciente`
+-- Indexes for table `datos_paciente`
 --
 ALTER TABLE `datos_paciente`
   ADD PRIMARY KEY (`id_paciente`),
+  ADD UNIQUE KEY `numero_expediente` (`numero_expediente`),
   ADD KEY `estado_civil` (`estado_civil`),
   ADD KEY `unidad_tiempo` (`unidad_tiempo`);
 
 --
--- Indices de la tabla `estado_civil_paciente`
+-- Indexes for table `estado_civil_paciente`
 --
 ALTER TABLE `estado_civil_paciente`
   ADD PRIMARY KEY (`id_estado_civil`);
 
 --
--- Indices de la tabla `identificacion_paciente`
+-- Indexes for table `identificacion_paciente`
 --
 ALTER TABLE `identificacion_paciente`
   ADD PRIMARY KEY (`id_identificacion_paciente`),
@@ -328,7 +332,7 @@ ALTER TABLE `identificacion_paciente`
   ADD KEY `estado_civil` (`estado_civil`);
 
 --
--- Indices de la tabla `personal_medico`
+-- Indexes for table `personal_medico`
 --
 ALTER TABLE `personal_medico`
   ADD PRIMARY KEY (`id_personal_medico`),
@@ -336,13 +340,13 @@ ALTER TABLE `personal_medico`
   ADD KEY `id_cat_per_medico` (`id_cat_per_medico`);
 
 --
--- Indices de la tabla `unidad_tiempo`
+-- Indexes for table `unidad_tiempo`
 --
 ALTER TABLE `unidad_tiempo`
   ADD PRIMARY KEY (`id_unidad_tiempo`);
 
 --
--- Indices de la tabla `usuarios`
+-- Indexes for table `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id_usuario`),
@@ -350,97 +354,97 @@ ALTER TABLE `usuarios`
   ADD KEY `id_cat_usuario` (`id_cat_usuario`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `categoria_personal_medico`
+-- AUTO_INCREMENT for table `categoria_personal_medico`
 --
 ALTER TABLE `categoria_personal_medico`
   MODIFY `id_categoria_personal_medico` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT de la tabla `categoria_usuario`
+-- AUTO_INCREMENT for table `categoria_usuario`
 --
 ALTER TABLE `categoria_usuario`
   MODIFY `id_categoria_usuario` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
--- AUTO_INCREMENT de la tabla `datos_familia_paciente`
+-- AUTO_INCREMENT for table `datos_familia_paciente`
 --
 ALTER TABLE `datos_familia_paciente`
   MODIFY `id_familia_paciente` int(10) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT de la tabla `datos_informante`
+-- AUTO_INCREMENT for table `datos_informante`
 --
 ALTER TABLE `datos_informante`
   MODIFY `id_informante_paciente` int(10) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT de la tabla `datos_paciente`
+-- AUTO_INCREMENT for table `datos_paciente`
 --
 ALTER TABLE `datos_paciente`
-  MODIFY `id_paciente` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_paciente` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
--- AUTO_INCREMENT de la tabla `estado_civil_paciente`
+-- AUTO_INCREMENT for table `estado_civil_paciente`
 --
 ALTER TABLE `estado_civil_paciente`
   MODIFY `id_estado_civil` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT de la tabla `identificacion_paciente`
+-- AUTO_INCREMENT for table `identificacion_paciente`
 --
 ALTER TABLE `identificacion_paciente`
   MODIFY `id_identificacion_paciente` int(10) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT de la tabla `personal_medico`
+-- AUTO_INCREMENT for table `personal_medico`
 --
 ALTER TABLE `personal_medico`
   MODIFY `id_personal_medico` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
--- AUTO_INCREMENT de la tabla `unidad_tiempo`
+-- AUTO_INCREMENT for table `unidad_tiempo`
 --
 ALTER TABLE `unidad_tiempo`
   MODIFY `id_unidad_tiempo` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT de la tabla `usuarios`
+-- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
   MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
--- Restricciones para tablas volcadas
+-- Constraints for dumped tables
 --
 
 --
--- Filtros para la tabla `datos_familia_paciente`
+-- Constraints for table `datos_familia_paciente`
 --
 ALTER TABLE `datos_familia_paciente`
   ADD CONSTRAINT `datos_familia_paciente_ibfk_1` FOREIGN KEY (`numero_paciente_fam`) REFERENCES `datos_generales_paciente` (`id_paciente`);
 
 --
--- Filtros para la tabla `datos_generales_paciente`
+-- Constraints for table `datos_generales_paciente`
 --
 ALTER TABLE `datos_generales_paciente`
   ADD CONSTRAINT `datos_generales_paciente_ibfk_1` FOREIGN KEY (`unidad_tiempo`) REFERENCES `unidad_tiempo` (`id_unidad_tiempo`);
 
 --
--- Filtros para la tabla `datos_paciente`
+-- Constraints for table `datos_paciente`
 --
 ALTER TABLE `datos_paciente`
   ADD CONSTRAINT `datos_paciente_ibfk_1` FOREIGN KEY (`estado_civil`) REFERENCES `estado_civil_paciente` (`id_estado_civil`),
   ADD CONSTRAINT `datos_paciente_ibfk_2` FOREIGN KEY (`unidad_tiempo`) REFERENCES `unidad_tiempo` (`id_unidad_tiempo`);
 
 --
--- Filtros para la tabla `identificacion_paciente`
+-- Constraints for table `identificacion_paciente`
 --
 ALTER TABLE `identificacion_paciente`
   ADD CONSTRAINT `identificacion_paciente_ibfk_1` FOREIGN KEY (`numero_paciente_ident`) REFERENCES `datos_generales_paciente` (`id_paciente`),
   ADD CONSTRAINT `identificacion_paciente_ibfk_2` FOREIGN KEY (`estado_civil`) REFERENCES `estado_civil_paciente` (`id_estado_civil`);
 
 --
--- Filtros para la tabla `personal_medico`
+-- Constraints for table `personal_medico`
 --
 ALTER TABLE `personal_medico`
   ADD CONSTRAINT `personal_medico_ibfk_1` FOREIGN KEY (`id_cat_per_medico`) REFERENCES `categoria_personal_medico` (`id_categoria_personal_medico`);
 
 --
--- Filtros para la tabla `usuarios`
+-- Constraints for table `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`id_cat_usuario`) REFERENCES `categoria_usuario` (`id_categoria_usuario`);

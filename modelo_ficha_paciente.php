@@ -7,6 +7,9 @@ $primer_apellido = $_POST['primer_apellido_paciente'];
 $segundo_apellido = $_POST['segundo_apellido_paciente'];
 $nombre = $_POST['nombres_paciente'];
 $sexo = $_POST['sexo_paciente'];
+/*if( isset($_POST['sexo_paciente[]']) ) {
+    $sexo = implode(' ', $_POST['sexo_paciente[]']);
+}*/
 
 $nacimiento = $_POST['fecha_nacimiento'];
 $fecha_nacimiento = date('Y-m-d', strtotime($nacimiento));
@@ -49,8 +52,8 @@ if($_POST['registro'] == 'nuevo') {
 
 if($_POST['registro'] == 'actualizar') {
         try {       
-                $stmt = $conn->prepare('UPDATE categoria_personal_medico SET cat_personal_medico = ?, editado = NOW()  WHERE id_categoria_personal_medico = ?');
-                $stmt->bind_param("si", $categoria_medica, $id_registro);     
+                $stmt = $conn->prepare('UPDATE datos_paciente SET numero_expediente = ?, primer_apellido_paciente = ?, segundo_apellido_paciente = ?, nombre_paciente = ?, sexo_paciente = ?, fecha_nacimiento_paciente = ?, edad_paciente = ?, unidad_tiempo = ?, estado_civil = ?, documento_legal_identidad = ?, numero_documento = ?, ocupacion_paciente = ?, direccion_paciente = ?, telefono_paciente = ?, editado = NOW()  WHERE id_paciente = ?');
+                $stmt->bind_param("ssssssiiissssii", $numero_expediente, $primer_apellido, $segundo_apellido, $nombre, $sexo, $fecha_nacimiento, $edad, $unidad_tiempo, $estado , $documento_identidad, $numero_documento, $ocupacion, $direccion, $telefono, $id_registro);     
                 $stmt->execute();
                         if($stmt->affected_rows) {
                             $respuesta = array(
@@ -75,7 +78,7 @@ if($_POST['registro'] == 'actualizar') {
 if($_POST['registro'] == 'eliminar') {
     $id_borrar = $_POST['id'];
         try {
-                $stmt = $conn->prepare('DELETE FROM categoria_personal_medico WHERE id_categoria_personal_medico = ? ');
+                $stmt = $conn->prepare('DELETE FROM datos_paciente WHERE id_paciente = ? ');
                 $stmt->bind_param('i', $id_borrar);
                 $stmt->execute();
                         if($stmt->affected_rows) {

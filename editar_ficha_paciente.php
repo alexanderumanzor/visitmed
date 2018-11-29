@@ -65,11 +65,11 @@
                                                 <div class="row">                                                                    
                                                         <div class="col-md-10">
                                                                 <div class="form-check form-check-inline col-md-6">
-                                                                        <input class="form-check-input" type="radio" name="sexo_paciente" id="sexo_paciente_masculino" value="Masculino" value="<?php echo $ficha_paciente['sexo_paciente']; ?>">
+                                                                        <input class="form-check-input" type="radio" name="sexo_paciente" id="sexo_paciente_masculino" value="Masculino" <?php if($ficha_paciente['sexo_paciente'] == Masculino){echo 'checked="checked"';} ?>>
                                                                         <label class="form-check-label" for="sexo_paciente_masculino">Masculino</label>
                                                                         </div>
                                                                 <div class="form-check form-check-inline col-md-6">
-                                                                        <input class="form-check-input" type="radio" name="sexo_paciente" id="sexo_paciente_femenino" value="Femenino" value="<?php echo $ficha_paciente['sexo_paciente']; ?>">
+                                                                        <input class="form-check-input" type="radio" name="sexo_paciente" id="sexo_paciente_femenino" value="Femenino" <?php if($ficha_paciente['sexo_paciente'] == Femenino){echo 'checked="checked"';} ?>>
                                                                         <label class="form-check-label" for="sexo_paciente_femenino">Femenino</label>
                                                                 </div>
                                                         </div>
@@ -172,7 +172,7 @@
                             <div class="box-footer">
                                         <input type="hidden" name="registro" value="actualizar">
                                         <input type="hidden" name="id_registro" value="<?php echo $id; ?>">
-                                        <button type="submit" class="btn btn-primary" id="crear_registro">Guardar</button>
+                                        <button type="submit" class="btn btn-primary" id="crear_registro_ficha_paciente">Guardar</button>
                             </div>
                             <!-- /.box-footer-->   
                             </form><!-- / .Form end -->  
