@@ -2,8 +2,8 @@
 -- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8889
--- Generation Time: Nov 29, 2018 at 03:19 AM
+-- Host: localhost:3307
+-- Generation Time: Nov 29, 2018 at 05:35 PM
 -- Server version: 5.6.34-log
 -- PHP Version: 7.2.1
 
@@ -82,8 +82,17 @@ CREATE TABLE `datos_familia_paciente` (
   `nombre_conyugue` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
   `responsable_paciente` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
   `direccion_responsable` text COLLATE utf8_unicode_ci NOT NULL,
-  `telefono_responsable` int(20) NOT NULL
+  `telefono_responsable` int(20) NOT NULL,
+  `editado` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `datos_familia_paciente`
+--
+
+INSERT INTO `datos_familia_paciente` (`id_familia_paciente`, `numero_paciente_fam`, `nombre_padre`, `nombre_madre`, `nombre_conyugue`, `responsable_paciente`, `direccion_responsable`, `telefono_responsable`, `editado`) VALUES
+(1, 2, 'Juan Perez', 'Juana Mendoza', 'Pedro Ramirez', '', 'Los Cocos', 87654321, '2018-11-29 11:19:18'),
+(2, 1, 'j', 'j', 'j', 'Padre', 'j', 1, '2018-11-29 11:32:01');
 
 -- --------------------------------------------------------
 
@@ -306,14 +315,14 @@ ALTER TABLE `datos_generales_paciente`
 -- Indexes for table `datos_informante`
 --
 ALTER TABLE `datos_informante`
-  ADD PRIMARY KEY (`id_informante_paciente`);
+  ADD PRIMARY KEY (`id_informante_paciente`),
+  ADD KEY `numero_paciente_informante` (`numero_paciente_informante`);
 
 --
 -- Indexes for table `datos_paciente`
 --
 ALTER TABLE `datos_paciente`
   ADD PRIMARY KEY (`id_paciente`),
-  ADD UNIQUE KEY `numero_expediente` (`numero_expediente`),
   ADD KEY `estado_civil` (`estado_civil`),
   ADD KEY `unidad_tiempo` (`unidad_tiempo`);
 
@@ -371,7 +380,7 @@ ALTER TABLE `categoria_usuario`
 -- AUTO_INCREMENT for table `datos_familia_paciente`
 --
 ALTER TABLE `datos_familia_paciente`
-  MODIFY `id_familia_paciente` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_familia_paciente` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `datos_informante`
 --
@@ -415,13 +424,19 @@ ALTER TABLE `usuarios`
 -- Constraints for table `datos_familia_paciente`
 --
 ALTER TABLE `datos_familia_paciente`
-  ADD CONSTRAINT `datos_familia_paciente_ibfk_1` FOREIGN KEY (`numero_paciente_fam`) REFERENCES `datos_generales_paciente` (`id_paciente`);
+  ADD CONSTRAINT `datos_familia_paciente_ibfk_1` FOREIGN KEY (`numero_paciente_fam`) REFERENCES `datos_paciente` (`id_paciente`);
 
 --
 -- Constraints for table `datos_generales_paciente`
 --
 ALTER TABLE `datos_generales_paciente`
   ADD CONSTRAINT `datos_generales_paciente_ibfk_1` FOREIGN KEY (`unidad_tiempo`) REFERENCES `unidad_tiempo` (`id_unidad_tiempo`);
+
+--
+-- Constraints for table `datos_informante`
+--
+ALTER TABLE `datos_informante`
+  ADD CONSTRAINT `datos_informante_ibfk_1` FOREIGN KEY (`numero_paciente_informante`) REFERENCES `datos_paciente` (`id_paciente`);
 
 --
 -- Constraints for table `datos_paciente`

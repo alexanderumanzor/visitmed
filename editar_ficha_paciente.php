@@ -102,7 +102,7 @@
                                                                                                 $sql = "SELECT * FROM unidad_tiempo ";
                                                                                                 $resultado = $conn->query($sql);
                                                                                                 while($tiempo = $resultado->fetch_assoc()) { 
-                                                                                                    if($tiempo['unidad_tiempo'] == $categoria_actual) { ?>
+                                                                                                    if($tiempo['id_unidad_tiempo'] == $categoria_actual) { ?>
                                                                                                 <option value="<?php echo $tiempo['id_unidad_tiempo']; ?>" selected>
                                                                                                         <?php echo $tiempo['descripcion_tiempo']; ?>
                                                                                                 </option>
