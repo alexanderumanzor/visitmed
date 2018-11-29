@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Nov 29, 2018 at 05:35 PM
+-- Generation Time: Nov 29, 2018 at 10:48 PM
 -- Server version: 5.6.34-log
 -- PHP Version: 7.2.1
 
@@ -91,7 +91,7 @@ CREATE TABLE `datos_familia_paciente` (
 --
 
 INSERT INTO `datos_familia_paciente` (`id_familia_paciente`, `numero_paciente_fam`, `nombre_padre`, `nombre_madre`, `nombre_conyugue`, `responsable_paciente`, `direccion_responsable`, `telefono_responsable`, `editado`) VALUES
-(1, 2, 'Juan Perez', 'Juana Mendoza', 'Pedro Ramirez', '', 'Los Cocos', 87654321, '2018-11-29 11:19:18'),
+(1, 2, 'Juan Perez', 'Juana Mendoza', 'Pedro Ramirez', 'Madre', 'Los Cocos', 87654321, '2018-11-29 11:37:27'),
 (2, 1, 'j', 'j', 'j', 'Padre', 'j', 1, '2018-11-29 11:32:01');
 
 -- --------------------------------------------------------
@@ -127,8 +127,17 @@ CREATE TABLE `datos_informante` (
   `numero_documento_informante` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
   `usuario_recepcion` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
   `fecha_inscripcion` date NOT NULL,
-  `observaciones_inscripcion` text COLLATE utf8_unicode_ci NOT NULL
+  `observaciones_inscripcion` text COLLATE utf8_unicode_ci NOT NULL,
+  `editado` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `datos_informante`
+--
+
+INSERT INTO `datos_informante` (`id_informante_paciente`, `numero_paciente_informante`, `nombre_informante`, `parentesco_informante`, `documento_identidad_informante`, `numero_documento_informante`, `usuario_recepcion`, `fecha_inscripcion`, `observaciones_inscripcion`, `editado`) VALUES
+(1, 2, 'Juan Perez Soza', 'Primo', 'Cedula de Identidad', 'REG87654321', 'Maria Mercedes', '2018-11-14', 'El paciente fue ingresado a urgencias en un taxi placa GUA38976', '2018-11-29 16:45:03'),
+(2, 9, 'Juana Mendez', 'Hermana', 'Cedula de Indentidad', 'REG12344546', 'Pelichuto', '2018-11-21', 'Todos los datos tomados en papel', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -385,7 +394,7 @@ ALTER TABLE `datos_familia_paciente`
 -- AUTO_INCREMENT for table `datos_informante`
 --
 ALTER TABLE `datos_informante`
-  MODIFY `id_informante_paciente` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_informante_paciente` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `datos_paciente`
 --
