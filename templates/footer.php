@@ -25,6 +25,8 @@
 <script src="js/adminlte.min.js"></script>
 <!-- Bootstrap Datepicker -->
 <script src="js/bootstrap-datepicker.min.js"></script>
+<!-- bootstrap time picker -->
+<script src="js/bootstrap-timepicker.min.js"></script>
 <!-- SweetAlert2 -->
 <script src="js/sweetalert2.all.min.js"></script>
 <!-- AdminLTE for demo purposes -->

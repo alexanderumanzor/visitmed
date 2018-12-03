@@ -55,9 +55,9 @@ $('#repetir_password').on('input', function() {
    $('.seleccionar').select2();
 
    //Timepicker
-  /* $('.timepicker').timepicker({
+  $('.timepicker').timepicker({
     showInputs: false
-  });*/
+  });
 
  /* $('#icono').iconpicker(); */
 

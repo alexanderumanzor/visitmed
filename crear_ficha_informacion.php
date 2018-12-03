@@ -63,7 +63,7 @@
                                                 <input type="text" class="form-control" id="parentesco_informante" name="parentesco_informante" placeholder="Parentesco">
                                         </div>
                                         <div class="form-group col-md-3">
-                                                <label for="documento_identidad_informante">Documento de identidad:</label>
+                                                <label for="documento_identidad_informante">Documento Identidad:</label>
                                                 <input type="text" class="form-control" id="documento_identidad_informante" name="documento_identidad_informante" placeholder="Tipo de Documento">
                                         </div>
                                         <div class="form-group col-md-3">

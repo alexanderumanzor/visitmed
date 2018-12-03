@@ -44,9 +44,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i> Ver Fichas Expedientes</a></li>
             <li class="treeview">
-                    <a href="#"><i class="fa fa-plus-circle"></i> Agregar Ficha Expediente
+                    <a href="#"><i class="far fa-circle"></i> Ficha Expediente
                           <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                           </span>
@@ -81,14 +80,24 @@
                                                       </span>
                                               </a>
                                               <ul class="treeview-menu">
-                                                      <li><a href="#"><i class="fa fa-list-ul"></i> Ver Ficha</a></li>
+                                                      <li><a href="lista_ficha_informacion.php"><i class="fa fa-list-ul"></i> Ver Ficha</a></li>
                                                       <li><a href="crear_ficha_informacion.php"><i class="fa fa-plus-circle"></i> Agregar Ficha</a></li>
                                               </ul>
                                       </li>
                           </ul>
             </li> 
-            <li><a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i> Ver Citas</a></li>
-            <li><a href="#"><i class="fa fa-plus-circle"></i> Agregar Citas</a></li>         
+
+            <li class="treeview">
+                    <a href="#"><i class="far fa-circle"></i> Cita Médica
+                          <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                          </span>
+                    </a>
+                          <ul class="treeview-menu">
+                                      <li><a href="#"><i class="fa fa-list-ul"></i> Ver Citas</a></li>
+                                      <li><a href="crear_cita_medica.php"><i class="fa fa-plus-circle"></i> Agregar Cita </a></li>
+                          </ul>
+            </li> 
           </ul>
         </li>
         <li class="treeview">

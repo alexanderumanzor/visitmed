@@ -67,7 +67,7 @@ if($_POST['registro'] == 'actualizar') {
 if($_POST['registro'] == 'eliminar') {
     $id_borrar = $_POST['id'];
         try {
-                $stmt = $conn->prepare('DELETE FROM datos_paciente WHERE id_paciente = ? ');
+                $stmt = $conn->prepare('DELETE FROM datos_informante WHERE id_informante_paciente = ? ');
                 $stmt->bind_param('i', $id_borrar);
                 $stmt->execute();
                         if($stmt->affected_rows) {

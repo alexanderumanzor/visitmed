@@ -79,7 +79,7 @@
                                                 <input type="text" class="form-control" id="parentesco_informante" name="parentesco_informante" placeholder="Parentesco" value="<?php echo $ficha_informacion['parentesco_informante']; ?>">
                                         </div>
                                         <div class="form-group col-md-3">
-                                                <label for="documento_identidad_informante">Documento de identidad:</label>
+                                                <label for="documento_identidad_informante">Documento Identidad:</label>
                                                 <input type="text" class="form-control" id="documento_identidad_informante" name="documento_identidad_informante" placeholder="Tipo de Documento" value="<?php echo $ficha_informacion['documento_identidad_informante']; ?>">
                                         </div>
                                         <div class="form-group col-md-3">
@@ -112,7 +112,7 @@
                             <div class="box-footer">
                                         <input type="hidden" name="registro" value="actualizar">
                                         <input type="hidden" name="id_registro" value="<?php echo $id; ?>">
-                                        <button type="submit" class="btn btn-primary" id="crear_registro">Agregar</button>
+                                        <button type="submit" class="btn btn-primary" id="crear_registro">Guardar</button>
                             </div>
                             <!-- /.box-footer-->   
                             </form><!-- / .Form end -->  
