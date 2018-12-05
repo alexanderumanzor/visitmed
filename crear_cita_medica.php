@@ -30,7 +30,7 @@
                         </div>
                     <div class="box-body">
                                 <!-- Form start -->
-                                <form  role="form" name="guardar-registro" id="guardar-registro" method="post" action="modelo_ficha_paciente.php">
+                                <form  role="form" name="guardar-registro" id="guardar-registro" method="post" action="modelo_cita_medica.php">
                                 <div class="box-body"> 
                                                                                      
                                                 <div class="form-group col-md-4 col-md-offset-8">
