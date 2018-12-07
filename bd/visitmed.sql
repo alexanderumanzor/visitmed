@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Nov 29, 2018 at 10:48 PM
+-- Generation Time: Dec 07, 2018 at 01:04 AM
 -- Server version: 5.6.34-log
 -- PHP Version: 7.2.1
 
@@ -71,6 +71,31 @@ INSERT INTO `categoria_usuario` (`id_categoria_usuario`, `cat_usuario`, `editado
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `cita_medica`
+--
+
+CREATE TABLE `cita_medica` (
+  `id_cita` tinyint(10) NOT NULL,
+  `id_expediente` int(10) NOT NULL,
+  `nombre_paciente` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
+  `area_medica` tinyint(10) NOT NULL,
+  `especial_medico` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `nombre_medico` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
+  `fecha_cita` date NOT NULL,
+  `hora_cita` time NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `cita_medica`
+--
+
+INSERT INTO `cita_medica` (`id_cita`, `id_expediente`, `nombre_paciente`, `area_medica`, `especial_medico`, `nombre_medico`, `fecha_cita`, `hora_cita`) VALUES
+(1, 1, 'Maria Venancia Morales Montalvan', 3, 'OtorrinolaringologÃ­a', 'JosÃ©  	RodrÃ­guez', '2018-12-27', '13:00:00'),
+(4, 1, 'Jose Sandino', 3, 'Ortopedia', 'Juan Sanchez', '2018-12-27', '11:00:00');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `datos_familia_paciente`
 --
 
@@ -97,24 +122,6 @@ INSERT INTO `datos_familia_paciente` (`id_familia_paciente`, `numero_paciente_fa
 -- --------------------------------------------------------
 
 --
--- Table structure for table `datos_generales_paciente`
---
-
-CREATE TABLE `datos_generales_paciente` (
-  `id_paciente` int(10) NOT NULL,
-  `numero_expediente` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `primer_apellido_paciente` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `segundo_apellido_paciente` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `nombres_paciente` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `sexo_paciente` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `fecha_nacimiento_paciente` date NOT NULL,
-  `unidad_tiempo` tinyint(10) NOT NULL,
-  `edad_paciente` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `datos_informante`
 --
 
@@ -136,7 +143,7 @@ CREATE TABLE `datos_informante` (
 --
 
 INSERT INTO `datos_informante` (`id_informante_paciente`, `numero_paciente_informante`, `nombre_informante`, `parentesco_informante`, `documento_identidad_informante`, `numero_documento_informante`, `usuario_recepcion`, `fecha_inscripcion`, `observaciones_inscripcion`, `editado`) VALUES
-(1, 2, 'Juan Perez Soza', 'Primo', 'Cedula de Identidad', 'REG87654321', 'Maria Mercedes', '2018-11-14', 'El paciente fue ingresado a urgencias en un taxi placa GUA38976', '2018-11-29 16:45:03'),
+(1, 9, 'Juan Perez Soza', 'Primo', 'Cedula de Identidad', 'REG87654321', 'Maria Mercedes', '2018-11-14', 'El paciente fue ingresado a urgencias en un taxi placa GUA38976', '2018-12-02 07:08:13'),
 (2, 9, 'Juana Mendez', 'Hermana', 'Cedula de Indentidad', 'REG12344546', 'Pelichuto', '2018-11-21', 'Todos los datos tomados en papel', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
@@ -196,23 +203,6 @@ INSERT INTO `estado_civil_paciente` (`id_estado_civil`, `descripcion_estado`) VA
 (3, 'Divorciado(a)'),
 (4, 'Viudo(a)'),
 (5, 'AcompaÃ±ado(a)');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `identificacion_paciente`
---
-
-CREATE TABLE `identificacion_paciente` (
-  `id_identificacion_paciente` int(10) NOT NULL,
-  `numero_paciente_ident` int(10) NOT NULL,
-  `estado_civil` tinyint(10) NOT NULL,
-  `documento_identidad` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `numero_documento` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `ocupacion_paciente` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
-  `direccion_paciente` text COLLATE utf8_unicode_ci NOT NULL,
-  `telefono_paciente` int(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -307,18 +297,19 @@ ALTER TABLE `categoria_usuario`
   ADD PRIMARY KEY (`id_categoria_usuario`);
 
 --
+-- Indexes for table `cita_medica`
+--
+ALTER TABLE `cita_medica`
+  ADD PRIMARY KEY (`id_cita`),
+  ADD KEY `id_expediente` (`id_expediente`),
+  ADD KEY `area_medica` (`area_medica`);
+
+--
 -- Indexes for table `datos_familia_paciente`
 --
 ALTER TABLE `datos_familia_paciente`
   ADD PRIMARY KEY (`id_familia_paciente`),
   ADD KEY `numero_paciente_fam` (`numero_paciente_fam`);
-
---
--- Indexes for table `datos_generales_paciente`
---
-ALTER TABLE `datos_generales_paciente`
-  ADD PRIMARY KEY (`id_paciente`),
-  ADD KEY `unidad_tiempo` (`unidad_tiempo`);
 
 --
 -- Indexes for table `datos_informante`
@@ -340,14 +331,6 @@ ALTER TABLE `datos_paciente`
 --
 ALTER TABLE `estado_civil_paciente`
   ADD PRIMARY KEY (`id_estado_civil`);
-
---
--- Indexes for table `identificacion_paciente`
---
-ALTER TABLE `identificacion_paciente`
-  ADD PRIMARY KEY (`id_identificacion_paciente`),
-  ADD KEY `numero_paciente_ident` (`numero_paciente_ident`),
-  ADD KEY `estado_civil` (`estado_civil`);
 
 --
 -- Indexes for table `personal_medico`
@@ -386,10 +369,15 @@ ALTER TABLE `categoria_personal_medico`
 ALTER TABLE `categoria_usuario`
   MODIFY `id_categoria_usuario` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
+-- AUTO_INCREMENT for table `cita_medica`
+--
+ALTER TABLE `cita_medica`
+  MODIFY `id_cita` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
 -- AUTO_INCREMENT for table `datos_familia_paciente`
 --
 ALTER TABLE `datos_familia_paciente`
-  MODIFY `id_familia_paciente` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_familia_paciente` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `datos_informante`
 --
@@ -399,17 +387,12 @@ ALTER TABLE `datos_informante`
 -- AUTO_INCREMENT for table `datos_paciente`
 --
 ALTER TABLE `datos_paciente`
-  MODIFY `id_paciente` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_paciente` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `estado_civil_paciente`
 --
 ALTER TABLE `estado_civil_paciente`
   MODIFY `id_estado_civil` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
---
--- AUTO_INCREMENT for table `identificacion_paciente`
---
-ALTER TABLE `identificacion_paciente`
-  MODIFY `id_identificacion_paciente` int(10) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `personal_medico`
 --
@@ -430,16 +413,17 @@ ALTER TABLE `usuarios`
 --
 
 --
+-- Constraints for table `cita_medica`
+--
+ALTER TABLE `cita_medica`
+  ADD CONSTRAINT `cita_medica_ibfk_1` FOREIGN KEY (`id_expediente`) REFERENCES `datos_paciente` (`id_paciente`),
+  ADD CONSTRAINT `cita_medica_ibfk_2` FOREIGN KEY (`area_medica`) REFERENCES `categoria_personal_medico` (`id_categoria_personal_medico`);
+
+--
 -- Constraints for table `datos_familia_paciente`
 --
 ALTER TABLE `datos_familia_paciente`
   ADD CONSTRAINT `datos_familia_paciente_ibfk_1` FOREIGN KEY (`numero_paciente_fam`) REFERENCES `datos_paciente` (`id_paciente`);
-
---
--- Constraints for table `datos_generales_paciente`
---
-ALTER TABLE `datos_generales_paciente`
-  ADD CONSTRAINT `datos_generales_paciente_ibfk_1` FOREIGN KEY (`unidad_tiempo`) REFERENCES `unidad_tiempo` (`id_unidad_tiempo`);
 
 --
 -- Constraints for table `datos_informante`
@@ -453,13 +437,6 @@ ALTER TABLE `datos_informante`
 ALTER TABLE `datos_paciente`
   ADD CONSTRAINT `datos_paciente_ibfk_1` FOREIGN KEY (`estado_civil`) REFERENCES `estado_civil_paciente` (`id_estado_civil`),
   ADD CONSTRAINT `datos_paciente_ibfk_2` FOREIGN KEY (`unidad_tiempo`) REFERENCES `unidad_tiempo` (`id_unidad_tiempo`);
-
---
--- Constraints for table `identificacion_paciente`
---
-ALTER TABLE `identificacion_paciente`
-  ADD CONSTRAINT `identificacion_paciente_ibfk_1` FOREIGN KEY (`numero_paciente_ident`) REFERENCES `datos_generales_paciente` (`id_paciente`),
-  ADD CONSTRAINT `identificacion_paciente_ibfk_2` FOREIGN KEY (`estado_civil`) REFERENCES `estado_civil_paciente` (`id_estado_civil`);
 
 --
 -- Constraints for table `personal_medico`

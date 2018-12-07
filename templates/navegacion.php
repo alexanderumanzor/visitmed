@@ -94,7 +94,17 @@
                           </span>
                     </a>
                           <ul class="treeview-menu">
-                                      <li><a href="#"><i class="fa fa-list-ul"></i> Ver Citas</a></li>
+                                      <li class="treeview">
+                                          <a href="#"><i class="fa fa-list-ul"></i> Ver Citas
+                                              <span class="pull-right-container">
+                                                    <i class="fa fa-angle-left pull-right"></i>
+                                              </span>
+                                          </a>
+                                          <ul class="treeview-menu">
+                                                <li><a href="lista_cita_medico.php"><i class="fa fa-list-ul"> Por Médico</i></a></li>
+                                                <li><a href="#"><i class="fa fa-list-ul"> Por Paciente</i></a></li>
+                                          </ul>
+                                      </li>
                                       <li><a href="crear_cita_medica.php"><i class="fa fa-plus-circle"></i> Agregar Cita </a></li>
                           </ul>
             </li> 

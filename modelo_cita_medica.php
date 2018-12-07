@@ -17,14 +17,14 @@ $id_registro = $_POST['id_registro'];
 if($_POST['registro'] == 'nuevo') {
   
         try{    
-                $stmt = $conn->prepare("INSERT INTO `datos_familia_paciente` (`numero_paciente_fam`, `nombre_padre`, `nombre_madre`, `nombre_conyugue`, `responsable_paciente`, `direccion_responsable`, `telefono_responsable`) VALUES (?,?,?,?,?,?,?) ");
-                $stmt->bind_param("isssssi", $numero_expediente, $padre, $madre, $conyugue, $responsable, $direccion_responsable, $telefono_responsable);
+                $stmt = $conn->prepare("INSERT INTO `cita_medica` (`id_expediente`, `nombre_paciente`, `area_medica`, `especial_medico`, `nombre_medico`, `fecha_cita`, `hora_cita`) VALUES (?,?,?,?,?,?,?) ");
+                $stmt->bind_param("isissss", $numero_expediente, $paciente, $area_medica, $especialidad, $medico, $fecha_cita, $hora_cita);
                 $stmt->execute();
                 $id_registro = $stmt->insert_id;
                         if($stmt->affected_rows) {
                                 $respuesta = array(
                                     'respuesta' => 'exito',
-                                    'id_ficha_familia' => $id_registro
+                                    'id_cita_medica' => $id_registro
                                 );
                         } else {
                                 $respuesta = array(
