@@ -41,11 +41,11 @@
                 <tbody>
                     <?php
                      try {
-                        $sql = "SELECT fecha_cita, hora_cita, especial_medico, nombre_medico, nombre_paciente, primer_apellido_paciente, segundo_apellido_paciente, numero_expediente, id_cita  ";
-                        $sql .= " FROM cita_medica ";
-                        $sql .= " INNER JOIN datos_paciente ";
-                        $sql .= " ON cita_medica.id_expediente=datos_paciente.id_paciente ";
-                        $sql .= " ORDER BY id_paciente";
+                        $sql = "SELECT `fecha_cita`, `hora_cita`, `especial_medico`, `nombre_medico`, `nombre_paciente`, `primer_apellido_paciente`, `segundo_apellido_paciente`, `numero_expediente`, `id_cita`  ";
+                        $sql .= " FROM `cita_medica` ";
+                        $sql .= " INNER JOIN `datos_paciente` ";
+                        $sql .= " ON `cita_medica`.`id_expediente`=`datos_paciente`.`id_paciente` ";
+                        $sql .= " ORDER BY `id_paciente` ";
                         $resultado = $conn->query($sql);
                      } catch (Exception $e) {
                         $error = $e->getMessage();
@@ -53,19 +53,27 @@
                      }      
                      while($cita_medico = $resultado->fetch_assoc() ) { ?>
                           <tr>
-                              <td><?php echo $cita_medico['fecha_cita'] . " " . $cita_medico['hora_cita']; ?></td>
-                              <td><?php echo $cita_medico['cat_personal_medico']; ?></td>
+                              <td><?php 
+                              $fecha = $cita_medico['fecha_cita'];
+                              $fecha_cita = date('d/m/Y', strtotime($fecha));  
+                              $hora = $cita_medico['hora_cita'];
+                              $hora_cita = date('h:i a', strtotime($hora));                            
+                              echo $fecha_cita . " - " . $hora_cita ; ?>
+                              </td>
                               <td><?php echo $cita_medico['especial_medico']; ?></td>
                               <td><?php echo $cita_medico['nombre_medico']; ?></td>
                               <td><?php echo $cita_medico['nombre_paciente'] . " " . $cita_medico['primer_apellido_paciente'] . " " . $cita_medico['segundo_apellido_paciente']; ?></td>
                               <td><?php echo $cita_medico['numero_expediente']; ?></td>
                               <td>
-                                <a href="editar_personal_medico.php?id=<?php echo $cita_medico['id_cita']; ?>" class="btn btn-info btn-flat margin ">
+                                <a href="editar_cita_medica.php?id=<?php echo $cita_medico['id_cita']; ?>" class="btn btn-info btn-flat margin ">
                                     <i class="fas fa-pencil-alt"></i>
                                 </a>
-                                <a href="#" data-id="<?php echo $cita_medico['id_cita']; ?>" data-tipo="personal_medico" class="btn btn-danger btn-flat margin borrar_registro">
+                                <a href="#" data-id="<?php echo $cita_medico['id_cita']; ?>" data-tipo="cita_medica" class="btn btn-danger btn-flat margin borrar_registro">
                                     <i class="fa fa-trash"></i>
                                 </a>
+                                <!--<a href="#" data-id="<?php echo $cita_medico['id_cita']; ?>" data-tipo="cita_medica" class="btn btn-default btn-flat margin confirmar_cita">
+                                    <i class="fa fa-check-square confirmar_cita"></i>
+                                </a>-->
                               </td>
                           </tr>
                      <?php } ?>                    

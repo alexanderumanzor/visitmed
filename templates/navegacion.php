@@ -102,7 +102,7 @@
                                           </a>
                                           <ul class="treeview-menu">
                                                 <li><a href="lista_cita_medico.php"><i class="fa fa-list-ul"> Por Médico</i></a></li>
-                                                <li><a href="#"><i class="fa fa-list-ul"> Por Paciente</i></a></li>
+                                                <li><a href="lista_cita_paciente.php"><i class="fa fa-list-ul"> Por Paciente</i></a></li>
                                           </ul>
                                       </li>
                                       <li><a href="crear_cita_medica.php"><i class="fa fa-plus-circle"></i> Agregar Cita </a></li>

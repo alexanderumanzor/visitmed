@@ -17,7 +17,7 @@ $id_registro = $_POST['id_registro'];
 if($_POST['registro'] == 'nuevo') {
   
         try{    
-                $stmt = $conn->prepare("INSERT INTO `cita_medica` (`id_expediente`, `nombre_paciente`, `area_medica`, `especial_medico`, `nombre_medico`, `fecha_cita`, `hora_cita`) VALUES (?,?,?,?,?,?,?) ");
+                $stmt = $conn->prepare("INSERT INTO `cita_medica` (`id_expediente`, `nombres_paciente`, `area_medica`, `especial_medico`, `nombre_medico`, `fecha_cita`, `hora_cita`) VALUES (?,?,?,?,?,?,?) ");
                 $stmt->bind_param("isissss", $numero_expediente, $paciente, $area_medica, $especialidad, $medico, $fecha_cita, $hora_cita);
                 $stmt->execute();
                 $id_registro = $stmt->insert_id;
@@ -41,8 +41,8 @@ if($_POST['registro'] == 'nuevo') {
 
 if($_POST['registro'] == 'actualizar') {
         try {       
-                $stmt = $conn->prepare('UPDATE datos_familia_paciente SET numero_paciente_fam = ?, nombre_padre = ?, nombre_madre = ?, nombre_conyugue = ?, responsable_paciente = ?, direccion_responsable = ?, telefono_responsable = ?, editado = NOW()  WHERE id_familia_paciente = ?');
-                $stmt->bind_param("isssssii", $numero_expediente, $padre, $madre, $conyugue, $responsable, $direccion_responsable, $telefono_responsable, $id_registro);     
+                $stmt = $conn->prepare('UPDATE cita_medica SET id_expediente = ?, nombres_paciente = ?,  area_medica = ?, especial_medico = ?, nombre_medico = ?, fecha_cita = ?, hora_cita = ?, editado = NOW()  WHERE id_cita = ?');
+                $stmt->bind_param("isissssi", $numero_expediente, $paciente, $area_medica, $especialidad, $medico, $fecha_cita, $hora_cita, $id_registro);     
                 $stmt->execute();
                         if($stmt->affected_rows) {
                             $respuesta = array(
@@ -67,7 +67,7 @@ if($_POST['registro'] == 'actualizar') {
 if($_POST['registro'] == 'eliminar') {
     $id_borrar = $_POST['id'];
         try {
-                $stmt = $conn->prepare('DELETE FROM datos_familia_paciente WHERE id_familia_paciente = ? ');
+                $stmt = $conn->prepare('DELETE FROM cita_medica WHERE id_cita = ? ');
                 $stmt->bind_param('i', $id_borrar);
                 $stmt->execute();
                         if($stmt->affected_rows) {
