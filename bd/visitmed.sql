@@ -2,8 +2,8 @@
 -- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3307
--- Generation Time: Dec 07, 2018 at 01:04 AM
+-- Host: localhost:3306
+-- Generation Time: Dec 10, 2018 at 12:39 AM
 -- Server version: 5.6.34-log
 -- PHP Version: 7.2.1
 
@@ -77,21 +77,22 @@ INSERT INTO `categoria_usuario` (`id_categoria_usuario`, `cat_usuario`, `editado
 CREATE TABLE `cita_medica` (
   `id_cita` tinyint(10) NOT NULL,
   `id_expediente` int(10) NOT NULL,
-  `nombre_paciente` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
+  `nombres_paciente` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
   `area_medica` tinyint(10) NOT NULL,
   `especial_medico` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `nombre_medico` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
   `fecha_cita` date NOT NULL,
-  `hora_cita` time NOT NULL
+  `hora_cita` time NOT NULL,
+  `editado` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `cita_medica`
 --
 
-INSERT INTO `cita_medica` (`id_cita`, `id_expediente`, `nombre_paciente`, `area_medica`, `especial_medico`, `nombre_medico`, `fecha_cita`, `hora_cita`) VALUES
-(1, 1, 'Maria Venancia Morales Montalvan', 3, 'OtorrinolaringologÃ­a', 'JosÃ©  	RodrÃ­guez', '2018-12-27', '13:00:00'),
-(4, 1, 'Jose Sandino', 3, 'Ortopedia', 'Juan Sanchez', '2018-12-27', '11:00:00');
+INSERT INTO `cita_medica` (`id_cita`, `id_expediente`, `nombres_paciente`, `area_medica`, `especial_medico`, `nombre_medico`, `fecha_cita`, `hora_cita`, `editado`) VALUES
+(1, 1, 'Maria Venancia Morales Montalvan', 3, 'OtorrinolaringologÃ­a', 'JosÃ© RodrÃ­guez', '2018-12-27', '13:30:00', '2018-12-09 10:09:50'),
+(4, 1, 'Jose Sandino', 3, 'Ortopedia', 'Juan Sanchez', '2018-12-27', '11:00:00', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -372,7 +373,7 @@ ALTER TABLE `categoria_usuario`
 -- AUTO_INCREMENT for table `cita_medica`
 --
 ALTER TABLE `cita_medica`
-  MODIFY `id_cita` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_cita` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `datos_familia_paciente`
 --
