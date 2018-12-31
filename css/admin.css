@@ -14,4 +14,44 @@
 .login-page .main-footer {
     display: none;
 }
-
+div#vacunas {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 20px;
+    line-height: 40px;
+    color: #ffffff;
+    text-align: center!important;
+    font-style: bold;
+    background-color: #99ccff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    margin-top: 10px;
+   
+}
+div#fecha_vacuna{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 20px;
+    line-height: 40px;
+    color: #ffffff;
+    text-align: center!important;
+    font-style: bold;
+    background-color: #99ccff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.resetdate {
+    padding: 5px!important;
+    font-size: 12px!important;
+    border-radius: 5px!important;
+}
+.tipo_vacunas {
+    background-color: rgba(206, 227, 246, .9);
+    text-align: center;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: bold;
+    line-height: 60px;
+    text-transform: uppercase;
+    border-radius: 6px;
+}
