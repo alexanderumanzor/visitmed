@@ -58,45 +58,45 @@
                                                 <div class="form-group col-md-7" id="fecha_vacuna">Fecha de Vacunación</div>
                                     </div>
                                     <div class="row dosis">
-                                                 <div class="col-md-2 tipo_vacunas col-md-offset-1 " id="">BCG</div>                
+                                                 <div class="form-group col-md-2 tipo_vacunas col-md-offset-1 " id="">BCG</div>                
                                                  <div class="form-group col-md-1">
-                                                        <label for="fecha_nacimiento">1a dosis:</label>
+                                                        <label for="fecha_nacimiento">1a dosis</label>
                                                                 <div class="input-group date">                                                                       
                                                                         <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento">
                                                                 </div>
                                                 </div>
                                                 <div class="form-group col-md-1">
-                                                        <label for="fecha_nacimiento">2a dosis:</label>
+                                                        <label for="fecha_nacimiento">2a dosis</label>
                                                                 <div class="input-group date">                                                                       
                                                                         <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento" disabled>
                                                                 </div>
                                                 </div>
                                                 <div class="form-group col-md-1">
-                                                        <label for="fecha_nacimiento">3a dosis:</label>
+                                                        <label for="fecha_nacimiento">3a dosis</label>
                                                                 <div class="input-group date">                                                                       
                                                                         <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento" disabled>
                                                                 </div>
                                                 </div>
                                                 <div class="form-group col-md-1">
-                                                        <label for="fecha_nacimiento">4a dosis:</label>
+                                                        <label for="fecha_nacimiento">4a dosis</label>
                                                                 <div class="input-group date">                                                                       
                                                                         <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento" disabled>
                                                                 </div>
                                                 </div>
                                                 <div class="form-group col-md-1">
-                                                        <label for="fecha_nacimiento">5a dosis:</label>
+                                                        <label for="fecha_nacimiento">5a dosis</label>
                                                                 <div class="input-group date">                                                                       
                                                                         <input type="text" class="form-control pull-right resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
                                                                 </div>
                                                 </div> 
                                                 <div class="form-group col-md-1">
-                                                        <label for="fecha_nacimiento">1er Ref. :</label>
+                                                        <label for="fecha_nacimiento">1er Ref.</label>
                                                                 <div class="input-group date">                                                                       
                                                                         <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
                                                                 </div>
                                                 </div>   
                                                 <div class="form-group col-md-1">
-                                                        <label for="fecha_nacimiento">2do Ref. :</label>
+                                                        <label for="fecha_nacimiento">2do Ref.</label>
                                                                 <div class="input-group date">                                                                       
                                                                         <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
                                                                 </div>
@@ -105,43 +105,43 @@
                                     <div class="row dosis">
                                                  <div class="col-md-2 tipo_vacunas col-md-offset-1 " id="">Rotavirus</div>                
                                                  <div class="form-group col-md-1">
-                                                        <label for="fecha_nacimiento">1a dosis:</label>
+                                                        <label for="fecha_nacimiento">1a dosis</label>
                                                                 <div class="input-group date">                                                                       
                                                                         <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento">
                                                                 </div>
                                                 </div>
                                                 <div class="form-group col-md-1">
-                                                        <label for="fecha_nacimiento">2a dosis:</label>
+                                                        <label for="fecha_nacimiento">2a dosis</label>
                                                                 <div class="input-group date">                                                                       
                                                                         <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento">
                                                                 </div>
                                                 </div>
                                                 <div class="form-group col-md-1">
-                                                        <label for="fecha_nacimiento">3a dosis:</label>
+                                                        <label for="fecha_nacimiento">3a dosis</label>
                                                                 <div class="input-group date">                                                                       
                                                                         <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
                                                                 </div>
                                                 </div>
                                                 <div class="form-group col-md-1">
-                                                        <label for="fecha_nacimiento">4a dosis:</label>
+                                                        <label for="fecha_nacimiento">4a dosis</label>
                                                                 <div class="input-group date">                                                                       
                                                                         <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
                                                                 </div>
                                                 </div>
                                                 <div class="form-group col-md-1">
-                                                        <label for="fecha_nacimiento">5a dosis:</label>
+                                                        <label for="fecha_nacimiento">5a dosis</label>
                                                                 <div class="input-group date">                                                                       
                                                                         <input type="text" class="form-control pull-right resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
                                                                 </div>
                                                 </div> 
                                                 <div class="form-group col-md-1">
-                                                        <label for="fecha_nacimiento">1er Ref. :</label>
+                                                        <label for="fecha_nacimiento">1er Ref.</label>
                                                                 <div class="input-group date">                                                                       
                                                                         <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
                                                                 </div>
                                                 </div>   
                                                 <div class="form-group col-md-1">
-                                                        <label for="fecha_nacimiento">2do Ref. :</label>
+                                                        <label for="fecha_nacimiento">2do Ref.</label>
                                                                 <div class="input-group date">                                                                       
                                                                         <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
                                                                 </div>
@@ -150,48 +150,590 @@
                                     <div class="row dosis">
                                                  <div class="col-md-2 tipo_vacunas col-md-offset-1 " id="">Pentavalente</div>                
                                                  <div class="form-group col-md-1">
-                                                        <label for="fecha_nacimiento">1a dosis:</label>
+                                                        <label for="fecha_nacimiento">1a dosis</label>
                                                                 <div class="input-group date">                                                                       
                                                                         <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  >
                                                                 </div>
                                                 </div>
                                                 <div class="form-group col-md-1">
-                                                        <label for="fecha_nacimiento">2a dosis:</label>
+                                                        <label for="fecha_nacimiento">2a dosis</label>
                                                                 <div class="input-group date">                                                                       
                                                                         <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento">
                                                                 </div>
                                                 </div>
                                                 <div class="form-group col-md-1">
-                                                        <label for="fecha_nacimiento">3a dosis:</label>
+                                                        <label for="fecha_nacimiento">3a dosis</label>
                                                                 <div class="input-group date">                                                                       
                                                                         <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento">
                                                                 </div>
                                                 </div>
                                                 <div class="form-group col-md-1">
-                                                        <label for="fecha_nacimiento">4a dosis:</label>
+                                                        <label for="fecha_nacimiento">4a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">5a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div> 
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">1er Ref.</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div>   
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">2do Ref.</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div>                            
+                                    </div>
+                                    <div class="row dosis">
+                                                 <div class="col-md-2 tipo_vacunas col-md-offset-1 " id="">Antipolio</div>                
+                                                 <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">1a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  >
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">2a dosis</label>
                                                                 <div class="input-group date">                                                                       
                                                                         <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento">
                                                                 </div>
                                                 </div>
                                                 <div class="form-group col-md-1">
-                                                        <label for="fecha_nacimiento">5a dosis:</label>
+                                                        <label for="fecha_nacimiento">3a dosis</label>
                                                                 <div class="input-group date">                                                                       
-                                                                        <input type="text" class="form-control pull-right resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                        <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">4a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">5a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
                                                                 </div>
                                                 </div> 
                                                 <div class="form-group col-md-1">
-                                                        <label for="fecha_nacimiento">1er Ref. :</label>
+                                                        <label for="fecha_nacimiento">1er Ref.</label>
                                                                 <div class="input-group date">                                                                       
                                                                         <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento">
                                                                 </div>
                                                 </div>   
                                                 <div class="form-group col-md-1">
-                                                        <label for="fecha_nacimiento">2do Ref. :</label>
+                                                        <label for="fecha_nacimiento">2do Ref.</label>
                                                                 <div class="input-group date">                                                                       
                                                                         <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento">
                                                                 </div>
                                                 </div>                            
                                     </div>
+                                    <div class="row dosis">
+                                                 <div class="col-md-2 tipo_vacunas col-md-offset-1 " id="">Neumococo</div>                
+                                                 <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">1a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  >
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">2a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">3a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">4a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">5a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div> 
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">1er Ref.</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>   
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">2do Ref.</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div>                            
+                                    </div>
+                                    <div class="row dosis">
+                                                 <div class="col-md-2 tipo_vacunas col-md-offset-1 " id="">DPT</div>                
+                                                 <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">1a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled  >
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">2a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">3a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">4a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">5a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div> 
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">1er Ref.</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>   
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">2do Ref.</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>                            
+                                    </div>
+                                    <div class="row dosis">
+                                                 <div class="col-md-2 tipo_vacunas col-md-offset-1 " id="">SPR</div>                
+                                                 <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">1a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  >
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">2a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">3a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">4a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">5a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div> 
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">1er Ref.</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div>   
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">2do Ref.</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div>                            
+                                    </div>
+                                    <div class="row dosis">
+                                                 <div class="col-md-2 tipo_vacunas col-md-offset-1 " id="">DT (Pediatrica)</div>                
+                                                 <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">1a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  >
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">2a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">3a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">4a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">5a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div> 
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">1er Ref.</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>   
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">2do Ref.</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>                            
+                                    </div>
+                                    <div class="row dosis">
+                                                 <div class="col-md-2 tipo_vacunas col-md-offset-1 " id="">Td</div>                
+                                                 <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">1a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  >
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">2a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">3a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">4a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">5a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div> 
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">1er Ref.</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>   
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">2do Ref.</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>                            
+                                    </div>
+                                    <div class="row dosis">
+                                                 <div class="col-md-2 tipo_vacunas col-md-offset-1 " id="">Tdpa</div>                
+                                                 <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">1a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  >
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">2a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">3a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">4a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">5a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div> 
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">1er Ref.</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>   
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">2do Ref.</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>                            
+                                    </div>
+                                    <div class="row dosis">
+                                                 <div class="col-md-2 tipo_vacunas col-md-offset-1 " id="">IPV</div>                
+                                                 <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">1a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  >
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">2a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">3a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">4a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">5a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div> 
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">1er Ref.</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>   
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">2do Ref.</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>                            
+                                    </div>
+                                    <div class="row dosis">
+                                                 <div class="col-md-2 tipo_vacunas col-md-offset-1 " id="">Hepatitis B</div>                
+                                                 <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">1a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  >
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">2a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">3a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">4a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">5a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div> 
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">1er Ref.</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div>   
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">2do Ref.</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div>                            
+                                    </div>
+                                    <div class="row dosis">
+                                                 <div class="col-md-2 tipo_vacunas2 col-md-offset-1 " id="">Influenza Estacionaria</div>                
+                                                 <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">1a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  >
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">2a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">3a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">4a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">5a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div> 
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">1er Ref.</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>   
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">2do Ref.</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div>                            
+                                    </div>
+                                    <div class="row dosis">
+                                                 <div class="col-md-2 tipo_vacunas2 col-md-offset-1 " id="">Influenza Pandemica</div>                
+                                                 <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">1a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  >
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">2a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">3a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">4a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">5a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div> 
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">1er Ref.</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento">
+                                                                </div>
+                                                </div>   
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">2do Ref.</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div>                            
+                                    </div>
+                                    <div class="row dosis">
+                                                 <div class="col-md-2 tipo_vacunas2 col-md-offset-1 " id="">Anti fiebre Amarilla</div>                
+                                                 <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">1a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  >
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">2a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">3a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">4a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">5a dosis</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div> 
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">1er Ref.</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right resetdate  fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div>   
+                                                <div class="form-group col-md-1">
+                                                        <label for="fecha_nacimiento">2do Ref.</label>
+                                                                <div class="input-group date">                                                                       
+                                                                        <input type="text" class="form-control pull-right  resetdate fecha" id="fecha_nacimiento" name="fecha_nacimiento"  disabled>
+                                                                </div>
+                                                </div>                            
+                                    </div>
+                                   
+                                    
 
 
 
@@ -203,7 +745,7 @@
                       </div>
                       <!-- /.box-body -->
 
-                      <div class="box-footer">
+                      <div class="box-footer col-md-offset-1">
                           <input type="hidden" name="registro" value="nuevo">
                           <button type="submit" class="btn btn-primary" id="crear_registro">Agregar</button>
                       </div>
