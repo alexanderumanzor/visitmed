@@ -2,10 +2,10 @@
 -- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Dec 10, 2018 at 12:39 AM
--- Server version: 5.6.34-log
--- PHP Version: 7.2.1
+-- Servidor: localhost:3307
+-- Tiempo de generación: 02-01-2019 a las 22:46:12
+-- Versión del servidor: 5.6.34-log
+-- Versión de PHP: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `visitmed`
+-- Base de datos: `visitmed`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categoria_personal_medico`
+-- Estructura de tabla para la tabla `categoria_personal_medico`
 --
 
 CREATE TABLE `categoria_personal_medico` (
@@ -35,7 +35,7 @@ CREATE TABLE `categoria_personal_medico` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `categoria_personal_medico`
+-- Volcado de datos para la tabla `categoria_personal_medico`
 --
 
 INSERT INTO `categoria_personal_medico` (`id_categoria_personal_medico`, `cat_personal_medico`, `editado`) VALUES
@@ -46,7 +46,7 @@ INSERT INTO `categoria_personal_medico` (`id_categoria_personal_medico`, `cat_pe
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categoria_usuario`
+-- Estructura de tabla para la tabla `categoria_usuario`
 --
 
 CREATE TABLE `categoria_usuario` (
@@ -56,7 +56,7 @@ CREATE TABLE `categoria_usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `categoria_usuario`
+-- Volcado de datos para la tabla `categoria_usuario`
 --
 
 INSERT INTO `categoria_usuario` (`id_categoria_usuario`, `cat_usuario`, `editado`) VALUES
@@ -71,7 +71,7 @@ INSERT INTO `categoria_usuario` (`id_categoria_usuario`, `cat_usuario`, `editado
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cita_medica`
+-- Estructura de tabla para la tabla `cita_medica`
 --
 
 CREATE TABLE `cita_medica` (
@@ -87,7 +87,7 @@ CREATE TABLE `cita_medica` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `cita_medica`
+-- Volcado de datos para la tabla `cita_medica`
 --
 
 INSERT INTO `cita_medica` (`id_cita`, `id_expediente`, `nombres_paciente`, `area_medica`, `especial_medico`, `nombre_medico`, `fecha_cita`, `hora_cita`, `editado`) VALUES
@@ -97,7 +97,7 @@ INSERT INTO `cita_medica` (`id_cita`, `id_expediente`, `nombres_paciente`, `area
 -- --------------------------------------------------------
 
 --
--- Table structure for table `datos_familia_paciente`
+-- Estructura de tabla para la tabla `datos_familia_paciente`
 --
 
 CREATE TABLE `datos_familia_paciente` (
@@ -113,7 +113,7 @@ CREATE TABLE `datos_familia_paciente` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `datos_familia_paciente`
+-- Volcado de datos para la tabla `datos_familia_paciente`
 --
 
 INSERT INTO `datos_familia_paciente` (`id_familia_paciente`, `numero_paciente_fam`, `nombre_padre`, `nombre_madre`, `nombre_conyugue`, `responsable_paciente`, `direccion_responsable`, `telefono_responsable`, `editado`) VALUES
@@ -123,7 +123,7 @@ INSERT INTO `datos_familia_paciente` (`id_familia_paciente`, `numero_paciente_fa
 -- --------------------------------------------------------
 
 --
--- Table structure for table `datos_informante`
+-- Estructura de tabla para la tabla `datos_informante`
 --
 
 CREATE TABLE `datos_informante` (
@@ -140,7 +140,7 @@ CREATE TABLE `datos_informante` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `datos_informante`
+-- Volcado de datos para la tabla `datos_informante`
 --
 
 INSERT INTO `datos_informante` (`id_informante_paciente`, `numero_paciente_informante`, `nombre_informante`, `parentesco_informante`, `documento_identidad_informante`, `numero_documento_informante`, `usuario_recepcion`, `fecha_inscripcion`, `observaciones_inscripcion`, `editado`) VALUES
@@ -150,7 +150,7 @@ INSERT INTO `datos_informante` (`id_informante_paciente`, `numero_paciente_infor
 -- --------------------------------------------------------
 
 --
--- Table structure for table `datos_paciente`
+-- Estructura de tabla para la tabla `datos_paciente`
 --
 
 CREATE TABLE `datos_paciente` (
@@ -173,7 +173,7 @@ CREATE TABLE `datos_paciente` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `datos_paciente`
+-- Volcado de datos para la tabla `datos_paciente`
 --
 
 INSERT INTO `datos_paciente` (`id_paciente`, `numero_expediente`, `primer_apellido_paciente`, `segundo_apellido_paciente`, `nombre_paciente`, `sexo_paciente`, `fecha_nacimiento_paciente`, `edad_paciente`, `unidad_tiempo`, `estado_civil`, `documento_legal_identidad`, `numero_documento`, `ocupacion_paciente`, `direccion_paciente`, `telefono_paciente`, `editado`) VALUES
@@ -186,7 +186,7 @@ INSERT INTO `datos_paciente` (`id_paciente`, `numero_expediente`, `primer_apelli
 -- --------------------------------------------------------
 
 --
--- Table structure for table `estado_civil_paciente`
+-- Estructura de tabla para la tabla `estado_civil_paciente`
 --
 
 CREATE TABLE `estado_civil_paciente` (
@@ -195,7 +195,7 @@ CREATE TABLE `estado_civil_paciente` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `estado_civil_paciente`
+-- Volcado de datos para la tabla `estado_civil_paciente`
 --
 
 INSERT INTO `estado_civil_paciente` (`id_estado_civil`, `descripcion_estado`) VALUES
@@ -208,7 +208,25 @@ INSERT INTO `estado_civil_paciente` (`id_estado_civil`, `descripcion_estado`) VA
 -- --------------------------------------------------------
 
 --
--- Table structure for table `personal_medico`
+-- Estructura de tabla para la tabla `fecha_vacuna`
+--
+
+CREATE TABLE `fecha_vacuna` (
+  `id_fecha_vacuna` int(10) NOT NULL,
+  `tipo_vacuna` int(11) NOT NULL,
+  `1a_dosis` date NOT NULL,
+  `2a_dosis` date NOT NULL,
+  `3a_dosis` date NOT NULL,
+  `4a_dosis` date NOT NULL,
+  `5a_dosis` date NOT NULL,
+  `1er_ref` date NOT NULL,
+  `2da_ref` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `personal_medico`
 --
 
 CREATE TABLE `personal_medico` (
@@ -223,7 +241,7 @@ CREATE TABLE `personal_medico` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `personal_medico`
+-- Volcado de datos para la tabla `personal_medico`
 --
 
 INSERT INTO `personal_medico` (`id_personal_medico`, `id_cat_per_medico`, `cargo_medico`, `especialidad_medica`, `nombre_personal_medico`, `apellido_personal_medico`, `numero_empleado`, `editado`) VALUES
@@ -237,7 +255,7 @@ INSERT INTO `personal_medico` (`id_personal_medico`, `id_cat_per_medico`, `cargo
 -- --------------------------------------------------------
 
 --
--- Table structure for table `unidad_tiempo`
+-- Estructura de tabla para la tabla `unidad_tiempo`
 --
 
 CREATE TABLE `unidad_tiempo` (
@@ -246,7 +264,7 @@ CREATE TABLE `unidad_tiempo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `unidad_tiempo`
+-- Volcado de datos para la tabla `unidad_tiempo`
 --
 
 INSERT INTO `unidad_tiempo` (`id_unidad_tiempo`, `descripcion_tiempo`) VALUES
@@ -258,7 +276,7 @@ INSERT INTO `unidad_tiempo` (`id_unidad_tiempo`, `descripcion_tiempo`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usuarios`
+-- Estructura de tabla para la tabla `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -272,7 +290,7 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `usuarios`
+-- Volcado de datos para la tabla `usuarios`
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `usuario`, `nombre_usuario`, `apellido_usuario`, `password`, `id_cat_usuario`, `editado`) VALUES
@@ -281,24 +299,56 @@ INSERT INTO `usuarios` (`id_usuario`, `usuario`, `nombre_usuario`, `apellido_usu
 (5, 'Recepcion', 'Recepcionista', 'Medico', '$2y$12$L4KcryKxIDEws/3cbFKHUe6dtl84xEoLoBTWQEjcioJ4Hb1Uab326', 5, '2018-11-03 16:26:58'),
 (6, 'elnuevo', 'El Nuevo', 'Aprende Rapido', '$2y$12$BMsT5IzAY3DHWSI70BzbS.N3z9J3eHi6Qc5wqUivsWvoBB609zDiW', 5, '0000-00-00 00:00:00');
 
+-- --------------------------------------------------------
+
 --
--- Indexes for dumped tables
+-- Estructura de tabla para la tabla `vacuna`
+--
+
+CREATE TABLE `vacuna` (
+  `id_vacuna` int(10) NOT NULL,
+  `nombre_vacuna` varchar(50) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `vacuna`
+--
+
+INSERT INTO `vacuna` (`id_vacuna`, `nombre_vacuna`) VALUES
+(1, 'BCG'),
+(2, 'Rotavirus'),
+(3, 'Pentavalente'),
+(4, 'Antipolio'),
+(5, 'Neumococo'),
+(6, 'DPT'),
+(7, 'SPR'),
+(8, 'DT(Pediatrica)'),
+(9, 'Td'),
+(10, 'Tdpa'),
+(11, 'IPV'),
+(12, 'Hepatitis B'),
+(13, 'Influenza Estacionaria'),
+(14, 'Influenza Pandemica '),
+(15, 'Anti fiebre Amarilla');
+
+--
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `categoria_personal_medico`
+-- Indices de la tabla `categoria_personal_medico`
 --
 ALTER TABLE `categoria_personal_medico`
   ADD PRIMARY KEY (`id_categoria_personal_medico`);
 
 --
--- Indexes for table `categoria_usuario`
+-- Indices de la tabla `categoria_usuario`
 --
 ALTER TABLE `categoria_usuario`
   ADD PRIMARY KEY (`id_categoria_usuario`);
 
 --
--- Indexes for table `cita_medica`
+-- Indices de la tabla `cita_medica`
 --
 ALTER TABLE `cita_medica`
   ADD PRIMARY KEY (`id_cita`),
@@ -306,21 +356,21 @@ ALTER TABLE `cita_medica`
   ADD KEY `area_medica` (`area_medica`);
 
 --
--- Indexes for table `datos_familia_paciente`
+-- Indices de la tabla `datos_familia_paciente`
 --
 ALTER TABLE `datos_familia_paciente`
   ADD PRIMARY KEY (`id_familia_paciente`),
   ADD KEY `numero_paciente_fam` (`numero_paciente_fam`);
 
 --
--- Indexes for table `datos_informante`
+-- Indices de la tabla `datos_informante`
 --
 ALTER TABLE `datos_informante`
   ADD PRIMARY KEY (`id_informante_paciente`),
   ADD KEY `numero_paciente_informante` (`numero_paciente_informante`);
 
 --
--- Indexes for table `datos_paciente`
+-- Indices de la tabla `datos_paciente`
 --
 ALTER TABLE `datos_paciente`
   ADD PRIMARY KEY (`id_paciente`),
@@ -328,13 +378,20 @@ ALTER TABLE `datos_paciente`
   ADD KEY `unidad_tiempo` (`unidad_tiempo`);
 
 --
--- Indexes for table `estado_civil_paciente`
+-- Indices de la tabla `estado_civil_paciente`
 --
 ALTER TABLE `estado_civil_paciente`
   ADD PRIMARY KEY (`id_estado_civil`);
 
 --
--- Indexes for table `personal_medico`
+-- Indices de la tabla `fecha_vacuna`
+--
+ALTER TABLE `fecha_vacuna`
+  ADD PRIMARY KEY (`id_fecha_vacuna`),
+  ADD KEY `tipo_vacuna` (`tipo_vacuna`);
+
+--
+-- Indices de la tabla `personal_medico`
 --
 ALTER TABLE `personal_medico`
   ADD PRIMARY KEY (`id_personal_medico`),
@@ -342,13 +399,13 @@ ALTER TABLE `personal_medico`
   ADD KEY `id_cat_per_medico` (`id_cat_per_medico`);
 
 --
--- Indexes for table `unidad_tiempo`
+-- Indices de la tabla `unidad_tiempo`
 --
 ALTER TABLE `unidad_tiempo`
   ADD PRIMARY KEY (`id_unidad_tiempo`);
 
 --
--- Indexes for table `usuarios`
+-- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id_usuario`),
@@ -356,97 +413,119 @@ ALTER TABLE `usuarios`
   ADD KEY `id_cat_usuario` (`id_cat_usuario`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- Indices de la tabla `vacuna`
+--
+ALTER TABLE `vacuna`
+  ADD PRIMARY KEY (`id_vacuna`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `categoria_personal_medico`
+-- AUTO_INCREMENT de la tabla `categoria_personal_medico`
 --
 ALTER TABLE `categoria_personal_medico`
   MODIFY `id_categoria_personal_medico` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT for table `categoria_usuario`
+-- AUTO_INCREMENT de la tabla `categoria_usuario`
 --
 ALTER TABLE `categoria_usuario`
   MODIFY `id_categoria_usuario` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
--- AUTO_INCREMENT for table `cita_medica`
+-- AUTO_INCREMENT de la tabla `cita_medica`
 --
 ALTER TABLE `cita_medica`
-  MODIFY `id_cita` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_cita` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT for table `datos_familia_paciente`
+-- AUTO_INCREMENT de la tabla `datos_familia_paciente`
 --
 ALTER TABLE `datos_familia_paciente`
   MODIFY `id_familia_paciente` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT for table `datos_informante`
+-- AUTO_INCREMENT de la tabla `datos_informante`
 --
 ALTER TABLE `datos_informante`
   MODIFY `id_informante_paciente` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT for table `datos_paciente`
+-- AUTO_INCREMENT de la tabla `datos_paciente`
 --
 ALTER TABLE `datos_paciente`
   MODIFY `id_paciente` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
--- AUTO_INCREMENT for table `estado_civil_paciente`
+-- AUTO_INCREMENT de la tabla `estado_civil_paciente`
 --
 ALTER TABLE `estado_civil_paciente`
   MODIFY `id_estado_civil` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT for table `personal_medico`
+-- AUTO_INCREMENT de la tabla `fecha_vacuna`
+--
+ALTER TABLE `fecha_vacuna`
+  MODIFY `id_fecha_vacuna` int(10) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT de la tabla `personal_medico`
 --
 ALTER TABLE `personal_medico`
   MODIFY `id_personal_medico` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
--- AUTO_INCREMENT for table `unidad_tiempo`
+-- AUTO_INCREMENT de la tabla `unidad_tiempo`
 --
 ALTER TABLE `unidad_tiempo`
   MODIFY `id_unidad_tiempo` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT for table `usuarios`
+-- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
--- Constraints for dumped tables
+-- AUTO_INCREMENT de la tabla `vacuna`
+--
+ALTER TABLE `vacuna`
+  MODIFY `id_vacuna` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+--
+-- Restricciones para tablas volcadas
 --
 
 --
--- Constraints for table `cita_medica`
+-- Filtros para la tabla `cita_medica`
 --
 ALTER TABLE `cita_medica`
   ADD CONSTRAINT `cita_medica_ibfk_1` FOREIGN KEY (`id_expediente`) REFERENCES `datos_paciente` (`id_paciente`),
   ADD CONSTRAINT `cita_medica_ibfk_2` FOREIGN KEY (`area_medica`) REFERENCES `categoria_personal_medico` (`id_categoria_personal_medico`);
 
 --
--- Constraints for table `datos_familia_paciente`
+-- Filtros para la tabla `datos_familia_paciente`
 --
 ALTER TABLE `datos_familia_paciente`
   ADD CONSTRAINT `datos_familia_paciente_ibfk_1` FOREIGN KEY (`numero_paciente_fam`) REFERENCES `datos_paciente` (`id_paciente`);
 
 --
--- Constraints for table `datos_informante`
+-- Filtros para la tabla `datos_informante`
 --
 ALTER TABLE `datos_informante`
   ADD CONSTRAINT `datos_informante_ibfk_1` FOREIGN KEY (`numero_paciente_informante`) REFERENCES `datos_paciente` (`id_paciente`);
 
 --
--- Constraints for table `datos_paciente`
+-- Filtros para la tabla `datos_paciente`
 --
 ALTER TABLE `datos_paciente`
   ADD CONSTRAINT `datos_paciente_ibfk_1` FOREIGN KEY (`estado_civil`) REFERENCES `estado_civil_paciente` (`id_estado_civil`),
   ADD CONSTRAINT `datos_paciente_ibfk_2` FOREIGN KEY (`unidad_tiempo`) REFERENCES `unidad_tiempo` (`id_unidad_tiempo`);
 
 --
--- Constraints for table `personal_medico`
+-- Filtros para la tabla `fecha_vacuna`
+--
+ALTER TABLE `fecha_vacuna`
+  ADD CONSTRAINT `fecha_vacuna_ibfk_1` FOREIGN KEY (`tipo_vacuna`) REFERENCES `vacuna` (`id_vacuna`);
+
+--
+-- Filtros para la tabla `personal_medico`
 --
 ALTER TABLE `personal_medico`
   ADD CONSTRAINT `personal_medico_ibfk_1` FOREIGN KEY (`id_cat_per_medico`) REFERENCES `categoria_personal_medico` (`id_categoria_personal_medico`);
 
 --
--- Constraints for table `usuarios`
+-- Filtros para la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`id_cat_usuario`) REFERENCES `categoria_usuario` (`id_categoria_usuario`);
