@@ -2,29 +2,36 @@
 
 include_once 'funciones/funciones.php';
 
-$numero_expediente = $_POST['numero_expediente'];
-$paciente = $_POST['nombre_paciente'];
-$area_medica = $_POST['area_medica'];
-$especialidad = $_POST['especialidad_medica'];
-$medico = $_POST['nombre_medico'];
-$fecha = $_POST['fecha_cita'];
-$fecha_cita = date('Y-m-d', strtotime($fecha));
-$hora = $_POST['hora_cita'];
-$hora_cita = date('H:i', strtotime($hora));
+$numero_expediente = $_POST['id_paciente'];
+$id_vacuna = $_POST['id_vacuna'];
+$primera_dosis = $_POST['1a_dosis'];
+$dosis1a = date('Y-m-d', strtotime($primera_dosis));
+$segunda_dosis = $_POST['2a_dosis'];
+$dosis2a = date('Y-m-d', strtotime($segunda_dosis));
+$tercera_dosis = $_POST['3a_dosis'];
+$dosis3a = date('Y-m-d', strtotime($tercera_dosis));
+$cuarta_dosis = $_POST['4a_dosis'];
+$dosis4a = date('Y-m-d', strtotime($cuarta_dosis));
+$quinta_dosis = $_POST['5a_dosis'];
+$dosis5a = date('Y-m-d', strtotime($quinta_dosis));
+$primer_refuerzo = $_POST['1er_ref'];
+$refuerzo1 = date('Y-m-d', strtotime($primer_refuerzo));
+$segundo_refuerzo = $_POST['2do_ref'];
+$refuerzo2 = date('Y-m-d', strtotime($segundo_refuerzo));
 
 $id_registro = $_POST['id_registro'];
 
 if($_POST['registro'] == 'nuevo') {
   
         try{    
-                $stmt = $conn->prepare("INSERT INTO `cita_medica` (`id_expediente`, `nombres_paciente`, `area_medica`, `especial_medico`, `nombre_medico`, `fecha_cita`, `hora_cita`) VALUES (?,?,?,?,?,?,?) ");
-                $stmt->bind_param("isissss", $numero_expediente, $paciente, $area_medica, $especialidad, $medico, $fecha_cita, $hora_cita);
+                $stmt = $conn->prepare("INSERT INTO `fecha_vacuna` (`tipo_vacuna`, `1a_dosis`, `2a_dosis`, `3a_dosis`, `4a_dosis`, `5a_dosis`, `1er_ref`, `2do_ref`) VALUES (?,?,?,?,?,?,?,?) ");
+                $stmt->bind_param("isssssss", $id_vacuna, $dosis1a, $dosis2a, $dosis3a, $dosis4a, $dosis5a, $refuerzo1, $refuerzo2);
                 $stmt->execute();
                 $id_registro = $stmt->insert_id;
                         if($stmt->affected_rows) {
                                 $respuesta = array(
                                     'respuesta' => 'exito',
-                                    'id_cita_medica' => $id_registro
+                                    'id_vacunas' => $id_registro
                                 );
                         } else {
                                 $respuesta = array(

@@ -5,7 +5,7 @@
     $password = 'root';
     $db = 'visitmed';
     $host = 'localhost';
-    $port = 3307;
+    $port = 3306;
 
     $conn = mysqli_init();
     $success = mysqli_real_connect(
