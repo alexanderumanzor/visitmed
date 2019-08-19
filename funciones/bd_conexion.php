@@ -2,7 +2,7 @@
 
     
     $user = 'root';
-    $password = 'root';
+    $password = '';
     $db = 'visitmed';
     $host = 'localhost';
     $port = 3306;
